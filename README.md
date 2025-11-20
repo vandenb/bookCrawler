@@ -136,10 +136,7 @@ BookCrawler/
 │
 ├── parse_libris.py                  # Script 1: Parse input
 ├── generate_manual_entries.py       # Script 2: URLs + HTML tool
-├── generate_json.py                 # Script 3: CSV → JSON
-│
-└── crawler/                         # Legacy crawler code
-    └── ...                          # (niet nodig voor deze workflow)
+└── generate_json.py                 # Script 3: CSV → JSON
 ```
 
 **Wat je écht nodig hebt voor een nieuw boek:**
