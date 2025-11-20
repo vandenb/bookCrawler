@@ -55,3 +55,25 @@ crawler.log
 # Sensitive files
 .env
 config_local.py
+
+# Development/documentation files
+QUICK-START.md
+USAGE.md
+claude-code-prompt.md
+clinerules
+example-config.py
+bookstores-template.csv
+
+# Screenshots and images
+*.png
+*.jpg
+*.jpeg
+
+# Temporary/dump files
+dump/
+frontend/
+
+# HTML files (except widget files)
+*.html
+!widget/*.html
+!data/verify_urls.html
