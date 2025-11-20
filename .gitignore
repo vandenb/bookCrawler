@@ -63,6 +63,8 @@ claude-code-prompt.md
 clinerules
 example-config.py
 bookstores-template.csv
+compass_artifact_*.md
+lijst.csv
 
 # Screenshots and images
 *.png
