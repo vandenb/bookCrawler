@@ -1,0 +1,1966 @@
+
+
+<!DOCTYPE html>
+<html lang="nl-NL">
+<head>
+    <meta http-equiv="Cache-Control" content="max-age=86400" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no">
+
+    
+    
+            <title>Libris | Winkels</title>
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://libris.nl/winkels" />
+        <meta property="og:site_name" content="Libris" />
+
+    
+
+
+<script type="text/javascript">
+    var CONSTANTS = {
+        currentCulture: "nl-NL",
+        currentDomain: "libris.nl",
+        companyName: "Libris",
+        rootCompanyName: "Libris",
+        companyUrlName: "libris",
+        IsSiteOrSubsiteWithOwnDomain: true,
+        isTolino: false,
+        currentUrlName: "Winkels",
+        isPublisherShadowsite: "False",
+
+        country: {
+            netherlandsId: 126,
+            netherlandsCode: 'NL',
+            belgiumId: 18,
+            belgiumCode: 'BE',
+            germanyId: 65
+                    },
+
+        deliveryOptions: {
+            none: 0,
+            delivery: 1,
+            pickup: 2
+        },
+        deliveryType: {
+            none: 0,
+            shipping: 1,
+            pickup: 2,
+            digital: 3
+        },
+        productStockState: {
+            new: 1,
+            used: 2,
+            ramsj: 3,
+            refurbished: 4
+        },
+        productType: {
+            book: 1,
+            agenda: 2,
+            tolino: 3,
+            ebook: 4,
+            audiobook: 10
+        },
+        productSubType: {
+            notSet: 0,
+            generalBook: 1,
+            studyBook: 2,
+            prent: 4
+        },
+        bookType: {
+            notSet: 0,
+            ramsj: 2,
+            studie: 4,
+            eBook: 0x10,
+            handschrift: 0x20,
+            prent: 0x40,
+            tolino: 0x80,
+            nonBook: 0x100,
+            discount: 0x200,
+            magazine: 0x400,
+            audiobook: 0x800
+        },
+        checkoutValidationAlertType:
+        {
+            info: 1,
+            warning: 2,
+            error: 3
+        },
+        company: {
+            librisCompanyId: 19,
+            blzCompanyId: 24
+            },
+        shippingPriority: {
+            None: 0,
+            Regular: 1,
+            NoHurry: 2
+                    },
+        paymentMethods: {
+            none: 0,
+            iDeal: 1,
+            reserveren: 2,
+            creditCard: 3,
+            acceptGiro: 4,
+            bancontact: 5,
+            automatischIncasso: 6,
+            payInShopByEmployee: 7,
+            payPal: 9,
+            betaalGarant: 10,
+            boekenBon: 11,
+            giftcard: 12,
+            opRekening: 13,
+            nationaleEntertainmentCard: 14,
+            administrativePayment: 16,
+            scheltemaGiftCardPayment: 17,
+            vvvGiftCardPayment: 18,
+            scheltemaKioskPayment: 19,
+            payByInvoice: 20,
+            deklerGiftCardPayment: 21,
+            patGiftCardPayment: 22,
+            givacardPayment: 23,
+            givacardAthenaeumPayment: 24
+        },
+        paymentMethodOptionalInputs: {
+            creditCardType: 0,
+            phoneNumber: 1,
+            emailAddress: 2,
+            paymentReference: 3,
+            acceptTerms: 4
+        },
+        cbCategoryBits: {
+            generic: 0x1,
+            study: 0x2,
+            science: 0x4,
+            other: 0x8
+        },
+        studyBookOrderType: {
+            studentAssociation: 1,
+            university: 2,
+            school: 3
+        },
+
+        zoekeenboekBaseUrl: "https://zoekeenboek.libris.nl/",
+        mainCompanyName: "Libris",
+
+        urlUmbracoTranslations: "/UmbracoTranslationsApi/GetTranslations",
+        urlLocationGetClosestShops: "/LocationApi/GetClosestShops",
+        urlLocationGetNewsletterClosestShops: "/LocationApi/GetNewsletterClosestShops",
+        urlLocationGetClosestShopsForCheckout: "/LocationApi/GetClosestShopsForCheckout",
+        urlGetCompanyCountries: "/LocationApi/GetCompanyCountries",
+        urlGetCompanyCountriesForShipment: "/LocationApi/GetCountriesForShipment",
+        urlAddressGetAddressFromProvider: "/AddressApi/GetAddressFromProvider",
+        urlGetClientPersonalInfo: "/ProfileApi/GetClientPersonalInfo",
+        urlUpdateClientPersonalInfo: "/ProfileApi/UpdateClientPersonalInfo",
+        urlChangePassword: "/ProfileApi/ChangePassword",
+        urlChangeClientPreferredShop: "/ProfileApi/ChangeClientPreferredShop",
+        urlGetClientDefaultAddresses: "/ProfileApi/GetClientDefaultAddresses",
+        urlGetClientAddresses: "/ProfileApi/GetClientAddresses",
+        urlAddOrUpdateClientAddress: "/ProfileApi/AddOrUpdateClientAddress",
+        urlRemoveClientAddress: "/ProfileApi/RemoveClientAddress",
+        urlGetClientOrdersHeaders: "/ProfileApi/GetClientOrdersHeaders",
+        urlGetClientOrderDetail: "/ProfileApi/GetClientOrderDetail",
+        urlGetClientOrderInvoice: "/ProfileApi/GetClientOrderInvoice",
+        urlGetClientWishlists: "/ProfileApi/GetClientWishlists",
+        urlGetWishlist: "/ProfileApi/GetWishlist",
+        urlAddWishlist: "/ProfileApi/AddWishlist",
+        urlEditWishlistName: "/ProfileApi/EditWishlistName",
+        urlDeleteWishlist: "/ProfileApi/DeleteWishlist",
+        urlChangeClientEmail: "/ProfileApi/ChangeClientEmail",
+        urlDeleteWishlistItem: "/ProfileApi/DeleteWishlistItem",
+        urlGetClientWishlistsWithIsbn: "/ProfileApi/GetClientWishlistsWithIsbn",
+        urlAddIsbnToWishlist: "/ProfileApi/AddIsbnToWishlist",
+        urlRemoveIsbnFromWishlist: "/ProfileApi/RemoveIsbnFromWishlist",
+        urlGetWishlistIsbns: "/ProfileApi/GetWishlistIsbns",
+        urlGetWhishlistsItemCount: "/ProfileApi/GetWhishlistsItemCount",
+        urlGetClientEbooks: "/ProfileApi/GetClientEbooks",
+        urlGetClientAudiobooks: "/ProfileApi/GetClientAudiobooks",
+        urlGetPreferredShop: "/ShopApi/GetPreferredShop",
+        urlGetShopById: "/ShopApi/GetShopById",
+        urlGetNewsletterShopById: "/ShopApi/GetNewsletterShopById",
+        urlGetShopByIdWithDistance: "/ShopApi/GetShopByIdWithDistance",
+        urlGetCompanyPreferredShops: "/ShopApi/GetCompanyPreferredShops",
+        urlGetCheckout: "/CheckoutApi/GetCheckout",
+        urlAddBookToCart: "/CheckoutApi/AddBookToCart",
+        urlUpdateProductQuantityFromCart: "/CheckoutApi/UpdateProductQuantityFromCart",
+        urlRemoveProductFromCart: "/CheckoutApi/RemoveProductFromCart",
+        urlAddPromotionCodeToCart: "/CheckoutApi/AddPromotionCode",
+        urlUpdateDeliveryMethod: "/CheckoutApi/UpdateDeliveryMethod",
+        urlUpdatePickupShop: "/CheckoutApi/UpdatePickupShop",
+        urlUpdateSelectedShop: "/CheckoutApi/UpdateSelectedShop",
+        urlShoppingCartProceed: "/CheckoutApi/ShoppingCartProceed",
+        urlVerifyUserEmailAndUpdateCheckout: "/CheckoutApi/VerifyUserEmailAndUpdateCheckout",
+        urlGetCustomerInformation: "/CheckoutApi/GetCustomerInformation",
+        urlStep1ProceedWithSelectedCustomer: "/CheckoutApi/Step1ProceedWithSelectedCustomer",
+        urlStep1ResetCheckoutCustomerServiceOrderClientInformation: "/CheckoutApi/Step1ResetCheckoutCustomerServiceOrderClientInformation",
+        urlResetUserLoginProcess: "/CheckoutApi/ResetUserLoginProcess",
+        urlStep1ProceedAsGuest: "/CheckoutApi/Step1ProceedAsGuest",
+        urlStep1ProceedAsGuestCustomer: "/CheckoutApi/Step1ProceedAsGuestCustomer",
+        urlStep1ProceedAsRegisteredClient: "/CheckoutApi/Step1ProceedAsRegisteredClient",
+        urlStep1ProceedAsRegisteredCustomer: "/CheckoutApi/Step1ProceedAsRegisteredCustomer",
+        urlSaveCheckout: "/CheckoutApi/SaveCheckout",
+        urlSetShippingOptions: "/CheckoutApi/SetShippingOptions",
+        urlSetGiftlistOptions: "/CheckoutApi/SetGiftlistOptions",
+        urlEditClientName: "/CheckoutApi/EditClientName",
+        urlGoToPayment: "/CheckoutApi/GoToPayment",
+        urlStep2ProceedWithClientRegistration: "/CheckoutApi/Step2ProceedWithClientRegistration",
+        urlUpdateCheckoutAddresses: "/CheckoutApi/UpdateCheckoutAddresses",
+        urlAddOrUpdateClientAddressCheckout: "/CheckoutApi/AddOrUpdateClientAddress",
+        urlRemoveAddressCheckout: "/CheckoutApi/RemoveAddress",
+        urlUpdatePromotionCbOffer: "/CheckoutApi/UpdatePromotionCbOffer",
+        urlGetCustomerAddresses: "/CheckoutApi/GetCustomerAddresses",
+        urlGetReviewsAndExcerptsForIsbn: "/SearchApi/GetReviewsAndExcerptsForIsbn",
+        urlCanClientChangeShop: "/ProfileApi/CanClientChangeShop",
+
+        urlDownloadTolinoEbooks: "/umbraco/api/tolinoebooksapi/Download",
+        urlOpenTolinoEbooks: "/umbraco/api/tolinoebooksapi/Open",
+
+        urlWriteReview: "/BookApi/WriteReview",
+        urlGetBookEditionsAvailability: "/BookApi/GetBookEditionsAvailability",
+        urlGetPromotionsForBook: "/BookApi/GetPromotionsForBook",
+
+        urlGetIsUserLoggedIn: "/AuthorizationApi/IsUserLoggedIn",
+
+        urlGetIsConsentCookiesAccepted: "/CookieConsentApi/IsConsentCookiesAccepted",
+
+        urlForgotPasswordAjax: "/AuthorizationApi/ForgotPasswordAjax",
+
+        urlGetContactShopInformation: "/ShopApi/GetContactShopInformation",
+        urlSendContactShopEmail: "/ShopApi/SendContactShopEmail",
+        urlSearchShops: "/ShopApi/SearchShops",
+        urlShopsList: "",
+        urlGetSearchSuggestions: "/SearchApi/GetSuggestions",
+        urlLoginPage: "/login",
+
+        urlSubscribeNewsletterPage: "/NewsletterApi/SubscribeToNewsletter",
+        urlNewsletterPageUrl: "/nieuwsbrief",
+        urlGetNewsletterPageFormUrl: "/NewsletterApi/GetNewsletterPageFormUrl",
+
+        //Studybooks
+        urlGetStudyBookGroups: "/StudyBooksApi/GetStudyBookGroups",
+        urlGetStudyBookList: "/StudyBooksApi/GetStudyBookList",
+        urlValidateSelectedStudyBooks: "/CheckoutApi/ValidateStudybooks",
+        urlAddStudyBooksToCart: "/CheckoutApi/AddStudybooksToCart",
+
+        urlGetOciCheckoutProducts: "/Oci/GetOciCheckoutProducts",
+        urlPostClientMigrationConsent: "/ClientMigrationApi/ConsentMigration",
+        urlPostClientMigrationIgnorePopup: "/ClientMigrationApi/IgnoreMigration",
+
+        urlRegisterClient: "/AccountApi/Register",
+    };
+</script>
+
+
+    
+
+    
+    <link rel="stylesheet" href="/css/Companies/Libris/ShopsListPage.css?v=3p5UlYBrkPJoMQ3d3LJ1c7J0JmDRKh8f6B46P9m6AtY" />
+
+    
+    <link rel="icon" href="/images/libris/favicon.ico?v=VkoKy8VPGvk2BI9X8g97HD118S2aMV4DLzWH9Frykuw" />
+
+    
+
+
+
+    <!-- https://use.typekit.net & https://p.typekit.net is the font file origin (Lighthouse required both links from Adobe) -->
+    <!-- It may not have the same origin as the CSS file -->
+    <link rel="preconnect" crossorigin href="https://use.typekit.net" />
+    <link rel="preconnect" crossorigin href="https://p.typekit.net" />
+
+    <!-- We use the full link to the CSS file in the rest of the tags -->
+    <link rel="preload" as="style" href="https://use.typekit.net/crn8fyi.css" />
+
+    <link rel="stylesheet" media="print" onload="this.media='all'" href="https://use.typekit.net/crn8fyi.css" />
+    <noscript>
+        <link rel="stylesheet" href="https://use.typekit.net/crn8fyi.css" />
+    </noscript>
+
+
+</head>
+<body>
+    <script type="importmap">
+        {
+            "imports": {
+                "_checkoutLayout": "/js/vue/_checkoutLayout.js?v=3bOn0or4d6mOXJEQUwEhCV5DL7L8ZYpbBTMC1TaB9xg",
+                "_header": "/js/vue/_header.js?v=EwS55LOtKmxrToVIZCw2lJZTJ6I2cAUI2E-1DOoVh2U",
+                "_profileLayout": "/js/vue/_profileLayout.js?v=bm8SGMzTTwS11yaww0ROQm_EKmTnAmibDpCQez9dMnY",
+                "bookPage": "/js/vue/bookPage.js?v=lKAIYCvXjm7sOLmBu8cDA8gY0tOJQEoFl_U_UgZ-xks",
+                "registerPage": "/js/vue/registerPage.js?v=7M8Vxzk_nm7jeR17eLCvqoB8U88BttdwU9UY9M-n6J4",
+                "renderBlockGrid": "/js/vue/renderBlockGrid.js?v=7YMAWIOHpb6pBXj74OnNTlgCKQ9s6WwR96jT-6VFXb8",
+                "searchPage": "/js/vue/searchPage.js?v=W3TIy4J8153H5xpkuTbJ3APjuI7PkC0OlGgyiPwdPEM",
+                "shopPage": "/js/vue/shopPage.js?v=OViqqc2C5TVl2NxzTtMawnwlri2qxe0zzyT4laK4Jsg",
+                "shoppingCartPage": "/js/vue/shoppingCartPage.js?v=GVrmyvCU6tk5WjACyNtw7nUItlLHkcrZ5wa6wiKTqok",
+                "shopsListPage": "/js/vue/shopsListPage.js?v=qwvgnuiVzNrI_OXR5IwccADwkTa6pJmEn2076FM-Gi4",
+                "contactPage": "/js/vue/contactPage.js?v=m5gAfs5QAhiVNJM0eySHz-K2UpZC6znz1kA2FlyYEvA",
+                "_faqLayout": "/js/vue/_faqLayout.js?v=c5rO7MJHKha_ZZnnyjgDlLuW9Twz7J_7iaCh8FH7s8Y",
+                "wishlistStore": "/js/vue/wishlistStore.js?v=QHxxNhdduajBPcC5cJEfRRtTQKiM9AvO1TZnCMSRos8",
+                "newsletterPage": "/js/vue/newsletterPage.js?v=abwFjSLwWxIN5HgFsCGEzo0HQK0Mjf5GA2-Yhy3sgCM",
+                "reviewsPages": "/js/vue/reviewsPages.js?v=gIBKK4nTmGG5Ybi5QrHjxNvZ_673o7b5oFb97q3NOXg",
+                "excerptsPages": "/js/vue/excerptsPages.js?v=gIBKK4nTmGG5Ybi5QrHjxNvZ_673o7b5oFb97q3NOXg",
+                "articlesPages": "/js/vue/articlesPages.js?v=gIBKK4nTmGG5Ybi5QrHjxNvZ_673o7b5oFb97q3NOXg"
+            }
+        }
+    </script>
+    <div id="loading-spinner-container" style="visibility:hidden;">
+        <div class="loading-spinner"></div>
+    </div>
+    
+<script type="module">
+    import { ClientIcon, WishlistSummaryIcon } from '_header';
+    import { wishlistState } from 'wishlistStore';
+
+    let headerApp = {
+        components: {
+            'client-icon': ClientIcon,
+            'wishlist-summary-icon': WishlistSummaryIcon
+        },
+        data() {
+            return {
+               timer: undefined,
+               searchKeyword: "",
+               searchSuggestions: null,
+               wishlistState,
+               showLogoutNotification: true,
+               showLoaderIcons: true,
+               isSearchActive: false
+             }
+        },
+        methods: {
+            getSearchSuggestions(e) {
+                clearTimeout(this.timer);
+                if (this.searchKeyword?.length == 0) {
+                    this.searchSuggestions = null;
+                    return;
+                }
+                this.timer = setTimeout(() => {
+                    axios.get(CONSTANTS.urlGetSearchSuggestions, { params: { keyword: this.searchKeyword } })
+                        .then(response => { this.searchSuggestions = response.data; })
+                        .catch(error => { console.log(error) });
+                }, 100);
+            },
+            clearSuggestions(isSearchActive = false) {
+                let ancestorElement = event?.relatedTarget?.parentElement?.parentElement;
+
+                if (ancestorElement?.classList.contains("search-suggestions")
+                    || ancestorElement?.classList.contains("website-search")) {
+                    return;
+                }
+
+                clearTimeout(this.timer);
+                this.timer = setTimeout(() => {
+                    this.searchSuggestions = null;
+                    clearTimeout(this.timer);
+                }, 400);
+                this.setSearchStatus(isSearchActive);
+            },
+            goToSearch(url) {
+                window.location.href = url;
+            },
+            searchKeyDown(element) {
+                this.clearSearchSuggestionsHighlight();
+                let searchSuggestions = document.querySelectorAll('.website-search .search-suggestions > ul > li');
+
+                if (searchSuggestions.length > 0) {
+                    this.highlightSearchSuggestion(searchSuggestions[0]);
+                }
+                event.preventDefault();
+            },
+            searchKeyUp(element) {
+                this.clearSearchSuggestionsHighlight();
+                let searchSuggestions = document.querySelectorAll('.website-search .search-suggestions > ul > li');
+
+                if (searchSuggestions.length > 0) {
+                    this.highlightSearchSuggestion(searchSuggestions[searchSuggestions.length - 1]);
+                }
+                event.preventDefault();
+            },
+            searchSuggestionKeyUp(element) {
+                this.clearSearchSuggestionsHighlight();
+
+                if (element.previousElementSibling) {
+                    this.highlightSearchSuggestion(element.previousElementSibling);
+                }
+                else {
+                    document.querySelector('.website-search .search-box > input').focus();
+                }
+                event.preventDefault();
+            },
+            searchSuggestionKeyDown(element) {
+                this.clearSearchSuggestionsHighlight();
+
+                if (element.nextElementSibling) {
+                    this.highlightSearchSuggestion(element.nextElementSibling);
+                }
+                else {
+                    document.querySelector('.website-search .search-box > input').focus();
+                }
+                event.preventDefault();
+
+            },
+            searchSuggestionMouseOver(element) {
+                this.clearSearchSuggestionsHighlight();
+                this.highlightSearchSuggestion(element);
+            },
+            highlightSearchSuggestion(element) {
+                var elementToHighlight = element;
+
+                if (element.nodeName == "SPAN" && element.parentElement?.nodeName == "LI") {
+                    elementToHighlight = element.parentElement;
+                }
+
+                elementToHighlight.classList.add("active");
+                elementToHighlight.focus();
+            },
+            clearSearchSuggestionsHighlight() {
+                let searchSuggestions = document.querySelectorAll('.website-search .search-suggestions > ul > li');
+
+                if (searchSuggestions?.length > 0) {
+                    for (let i = 0; i < searchSuggestions.length; i++) {
+                        searchSuggestions[i].classList.remove("active");
+                    }
+                }
+                this.setSearchStatus(true);
+            },
+            clearSearchKeyword() {
+                this.searchKeyword = "";
+                this.clearSuggestions(true);
+                document.querySelector('.website-search .search-box > input').focus();
+            },
+            setSearchStatus(isActive) {
+                this.isSearchActive = isActive;
+            },
+            decodeSearchKeyword() {
+                let textArea = document.createElement("textarea");
+                textArea.innerHTML = this.searchKeyword;
+                this.searchKeyword = textArea.value;
+            }
+        },
+        created() {
+            this.wishlistState.calculateWhishlistsItemCount();
+
+            let component = this;
+            setTimeout(function () {
+                component.showLogoutNotification = false;
+            }, 5000);
+        },
+        mounted() {
+            this.showLoaderIcons = false;
+
+            setTimeout(function () {
+                document.querySelector('.user-navigation-list.hidden-all').classList.remove('hidden-all');
+            }, 100);
+            
+            this.decodeSearchKeyword();
+        }
+    }
+
+    Vue.createApp(headerApp).mount('#mainheader');
+</script>
+
+    <nav class="usps hidden-xs">
+        <div class="grid-container">
+            <ul class="usps-list">
+                            <li class="body-small">
+                                <span>Gratis bezorging nieuwe boeken vanaf 20 euro binnen NL </span>
+                            </li>
+                            <li class="body-small">
+                                <span>Op werkdagen voor 23.59 uur besteld, binnen 1-2 dagen thuisbezorgd </span>
+                            </li>
+                            <li class="body-small">
+                                <span>Ruilen of retourneren bij Libris of Blz.-boekhandels </span>
+                            </li>
+            </ul>
+        </div>
+    </nav>
+
+<div class="main-header   libris" id="mainheader">
+    <div class="main-nav-header grid-container  center-xs ">
+        <nav class="user-navigation">
+            <ul class="user-navigation-list" v-if="showLoaderIcons">
+                <li class="user-navigation-item hidden-xs">
+                    <a href="#" class="link-item">
+                        <span class="icon-support"></span>
+                    </a>
+                </li>
+                <li class="user-navigation-item hidden-xs">
+                    <a href="#" class="link-item">
+                        <span class="icon-profile"></span>
+                    </a>
+                </li>
+                <li class="user-navigation-item hidden-xs">
+                    <a href="#" class="link-item">
+                        <span class="icon-heart"></span>
+                    </a>
+                </li>
+                <li class="user-navigation-item hidden-xs">
+                    <a href="#" class="link-item">
+                        <span class="icon-bag"></span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="user-navigation-list hidden-all" v-if="!showLoaderIcons">
+                <li class="user-navigation-item hidden-xs">
+                        <!-- DictItem: Header_AriaLabel_CustomerSupportIcon --><a href="/klantenservice" class="link-item" target="_self" aria-label="Ga naar klantenservice">
+                            <span class="icon-support"></span>
+                        </a>
+                </li>
+                <client-icon></client-icon>
+                <li class="user-navigation-item position-relative">
+                    <!-- DictItem: Header_AriaLabel_WishlistIcon --><a href="/profiel/mijn-verlanglijsten" class="link-item" aria-label="Ga naar verlanglijst">
+                        <wishlist-summary-icon :wishlist-summary="wishlistState.wishlistSummary"></wishlist-summary-icon>
+                    </a>
+                </li>
+                <li class="user-navigation-item position-relative">
+                    <!-- DictItem: Header_AriaLabel_CheckoutIcon --><a href="/winkelwagen" class="link-item" aria-label="Ga naar bestellen">
+                        <span class="icon-bag"></span>
+                        <span id="CheckoutIconCountBubble" class="count-bubble hidden-all"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+            <a class="main-logo" href="/">
+                <img class="img-responsive " src="/media/eahi0ur2/libris_logo.svg" alt="Libris logo" />
+                <h3 class="hidden-lg hidden-md hidden-sm hidden-xs">Libris</h3>
+            </a>
+        <div class="left-navigation">
+            <div class="mobile-menu">
+                <!-- DictItem: Header_AriaLabel_OpenNavigationButton --><button id="open-mobile-nav" class="hamburguer-menu" aria-label="Open navigatie">
+                    <span class="icon-hamburger">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                        <span class="path3"></span>
+                    </span>
+                </button>
+            </div>
+            <form class="website-search hidden-xs" :class="{ 'active' : isSearchActive}" method="get" action="/zoek">
+                <div class="search-overlay"></div>
+                <div class="search-box">
+                    <!-- DictItem: Header_Placeholder_Search --><input type="text" class="form-input" v-model="searchKeyword" v-on:keyup="getSearchSuggestions($event)" v-on:keydown.down="searchKeyDown($event.target)" v-on:keydown.up="searchKeyUp($event.target)" name="q" autocomplete="off" v-on:blur="clearSuggestions()" v-on:focus="clearSearchSuggestionsHighlight()" placeholder="Waar ben je naar op zoek?" />
+                    <button type="button" v-on:click="clearSearchKeyword" class="clear-search" v-if="searchKeyword?.length > 0">
+                        <span class="icon-close"></span>
+                    </button>
+                    <!-- DictItem: Header_AriaLabel_SubmitSearchButton --><button type="submit" class="search-submit" aria-label="Zoeken">
+                        <span class="icon-search"></span>
+                    </button>
+                </div>
+                <div class="search-suggestions" v-if="searchSuggestions != null && searchSuggestions.length > 0" v-cloak>
+                    <ul>
+                        <li v-for="suggestion in searchSuggestions" tabindex='-1'
+                            v-on:blur="clearSuggestions()"
+                            v-on:mouseover="searchSuggestionMouseOver($event.target)"
+                            v-on:click="goToSearch(suggestion.url)"
+                            v-on:keydown.enter="goToSearch(suggestion.url)"
+                            v-on:keydown.up="searchSuggestionKeyUp($event.target)"
+                            v-on:keydown.down="searchSuggestionKeyDown($event.target)"
+                            v-html="suggestion.title">
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+    <form class="hidden-website-search grid-container hidden-lg" method="get" action="/zoek">
+        <div class="search-box">
+            <!-- DictItem: Header_Placeholder_Search --><input type="text" class="form-input" v-model="searchKeyword" v-on:keyup="getSearchSuggestions($event)" name="q" autocomplete="off" v-on:blur="clearSuggestions()" placeholder="Waar ben je naar op zoek?" />
+            <!-- DictItem: Header_AriaLabel_SubmitSearchButton --><button type="submit" class="search-submit" aria-label="Zoeken">
+                <span class="icon-search"></span>
+            </button>
+        </div>
+        <div class="search-suggestions" v-if="searchSuggestions != null && searchSuggestions.length > 0" v-cloak>
+            <ul>
+                <li v-for="suggestion in searchSuggestions" v-on:click="goToSearch(suggestion.url)" v-html="suggestion.title">
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
+
+
+        <div class="website-navigation-container">
+            <div class="mobile-navigation-overlay"></div>
+            <div class="grid-container">
+                <nav class="website-navigation">
+                    <div id="close-mobile-nav" class="mobile-close-navigation-button">
+                        <span>X</span>
+                    </div>
+                        <ul class="side-navigation left-side-navigation remove-default-list-styles body-bold">
+                            
+
+
+    <li id="main-navigation-item-1-9d6b142b-9d28-41da-94c1-d1899cfe47d6" class="main-navigation-item has-sub-navigation ">
+
+            <div class="navigation-item" title="Actueel">
+                <a href="#" target="">
+                    Actueel
+                    <span class="icon icon-arrow-down "></span>
+                </a>
+            </div>
+
+            <div class="sub-navigation-container body-normal">
+                <div id="sub-navigation-submenu-offset-1" data-target="main-navigation-item-1" class="sub-navigation-submenu-offset"></div>
+                <nav class="sub-navigation">
+
+                    <ul class="remove-default-list-styles submenus-together">
+
+                                <li id="82aff327-3165-473f-8b72-be7a52a259e2" class="sub-navigation-item sub-navigation-title hidden-nav-item-xs  ">
+
+                                        <h4>
+                                            <span>BOEKEN</span>
+                                        </h4>
+                                            <span class="icon icon-arrow-down hidden-lg"></span>
+                                </li>
+                                <li class="sub-navigation-of-82aff327-3165-473f-8b72-be7a52a259e2  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/top-10"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Boeken Top 10&#x27;s
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-82aff327-3165-473f-8b72-be7a52a259e2  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/boeken-in-het-nieuws"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Boeken in het nieuws
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-82aff327-3165-473f-8b72-be7a52a259e2  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/uitgelicht"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Nieuw verschenen
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-82aff327-3165-473f-8b72-be7a52a259e2  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/welke-boeken-verschijnen-er-deze-maand"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Verwacht en te reserveren
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-82aff327-3165-473f-8b72-be7a52a259e2  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/kinderboeken"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Kinderboekentips 
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-82aff327-3165-473f-8b72-be7a52a259e2  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/booktok"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            BookToktips 
+                                        </a>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li id="335274fd-2ebb-4602-b48b-c4f0b205faf5" class="sub-navigation-item sub-navigation-title hidden-nav-item-xs  ">
+
+                                        <h4>
+                                            <span>DIGITAAL LEZEN</span>
+                                        </h4>
+                                            <span class="icon icon-arrow-down hidden-lg"></span>
+                                </li>
+                                <li class="sub-navigation-of-335274fd-2ebb-4602-b48b-c4f0b205faf5  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/tolino-ereaders/ebookacties"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Ebook van de Week
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-335274fd-2ebb-4602-b48b-c4f0b205faf5  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/tolino-ereaders/nieuwe-ebooks-en-top-10"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Ebooks Top 10
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-335274fd-2ebb-4602-b48b-c4f0b205faf5  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/tolino-ereaders/nieuwe-ebooks-en-top-10"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Nieuwe ebooks
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-335274fd-2ebb-4602-b48b-c4f0b205faf5  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/luisterboeken"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Luisterboeken
+                                        </a>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li id="1c2e743c-a537-41bc-9dbb-f7dd3ad40a5d" class="sub-navigation-item sub-navigation-title hidden-nav-item-xs  ">
+
+                                        <h4>
+                                            <span>ACTIES EN PROMOTIES</span>
+                                        </h4>
+                                            <span class="icon icon-arrow-down hidden-lg"></span>
+                                </li>
+                                <li class="sub-navigation-of-1c2e743c-a537-41bc-9dbb-f7dd3ad40a5d  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/acties"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Voordeelacties
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-1c2e743c-a537-41bc-9dbb-f7dd3ad40a5d  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/prijsvragen"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Prijsvragen
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-1c2e743c-a537-41bc-9dbb-f7dd3ad40a5d  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/online-folder"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Online folder
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-1c2e743c-a537-41bc-9dbb-f7dd3ad40a5d  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/tolino-ereaders/ebookacties"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Ebookacties
+                                        </a>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li id="06157fad-4716-42f0-8f8f-03713a446319" class="sub-navigation-item sub-navigation-title hidden-nav-item-xs  ">
+
+                                        <h4>
+                                            <span>PRIJZEN</span>
+                                        </h4>
+                                            <span class="icon icon-arrow-down hidden-lg"></span>
+                                </li>
+                                <li class="sub-navigation-of-06157fad-4716-42f0-8f8f-03713a446319  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/fictie/libris-literatuur-prijs"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Libris Literatuur Prijs
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-06157fad-4716-42f0-8f8f-03713a446319  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/non-fictie/libris-geschiedenis-prijs/"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Libris Geschiedenis Prijs
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-06157fad-4716-42f0-8f8f-03713a446319  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/mooiste-boekomslag"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Mooiste Boekomslag
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-06157fad-4716-42f0-8f8f-03713a446319  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/boekhandelsprijs"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Boekhandelsprijs 2025
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-06157fad-4716-42f0-8f8f-03713a446319  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/kinderboeken/griffels-en-penselen"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Griffels en Penselen
+                                        </a>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li class="sub-navigation-of-06157fad-4716-42f0-8f8f-03713a446319 sub-menu-item-with-image sub-navigation-item hidden-nav-item-xs ">
+                                        <img loading="lazy" src="/media/sjplsjcq/booktok-navigatiemenu-vs2-185px.jpg" class="img-responsive hidden-xs" alt="Bekijk hier onze tips!" width="185" height="307">
+                                        <div>
+                                                <a href="/actueel/booktok"
+                                                   target="_self">
+                                                    Bekijk hier onze tips!
+                                                </a>
+                                        </div>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li id="3540699e-29b5-453b-a167-60b6c93a8d17" class="sub-navigation-item sub-navigation-title hidden-nav-item-xs  ">
+
+                                        <h4>
+                                            <span>VOL VAN BOEKEN</span>
+                                        </h4>
+                                            <span class="icon icon-arrow-down hidden-lg"></span>
+                                </li>
+                                <li class="sub-navigation-of-3540699e-29b5-453b-a167-60b6c93a8d17  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/vol-van-boeken"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            VOL van Boeken Magazine
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-3540699e-29b5-453b-a167-60b6c93a8d17  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/uitgelicht/vol-van-boeken-de-podcast"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            VOL van Boeken Podcast
+                                        </a>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li id="7fbb90e8-facf-4885-a82c-aa99b82471cd" class="sub-navigation-item sub-navigation-title hidden-nav-item-xs  last">
+
+                                        <h4>
+                                            <span>ZOEK EEN BOEK</span>
+                                        </h4>
+                                            <span class="icon icon-arrow-down hidden-lg"></span>
+                                </li>
+                                <li class="sub-navigation-of-7fbb90e8-facf-4885-a82c-aa99b82471cd  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/klantenservice/waar-is-dit-boek-op-voorraad"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Voorraad in de boekhandel
+                                        </a>
+                                </li>
+                    </ul>
+                </nav>
+            </div>
+    </li>
+    <li id="main-navigation-item-2-85da1a30-0494-4e99-9c9c-dc7aa506be03" class="main-navigation-item has-sub-navigation ">
+
+            <div class="navigation-item" title="Boeken">
+                <a href="#" target="">
+                    Boeken
+                    <span class="icon icon-arrow-down "></span>
+                </a>
+            </div>
+
+            <div class="sub-navigation-container body-normal">
+                <div id="sub-navigation-submenu-offset-2" data-target="main-navigation-item-2" class="sub-navigation-submenu-offset"></div>
+                <nav class="sub-navigation">
+
+                    <ul class="remove-default-list-styles ">
+
+                                <li id="67e50a65-ce38-4ef8-9b51-d7430bdd5edb" class="sub-navigation-item sub-navigation-title hidden-nav-item-xs  ">
+
+                                        <h4>
+                                            <span>CATEGORIE&#xCB;N OVERZICHT</span>
+                                        </h4>
+                                            <span class="icon icon-arrow-down hidden-lg"></span>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Alle boeken
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/literatuur"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Literatuur
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/romans"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Romans
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/spanning"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Spanning
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/kinderboeken"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Kinderboeken
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/koken"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Koken
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/geschiedenis"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Geschiedenis
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/reizen"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Reizen
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/biografieen"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Biografie&#xEB;n
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/fantasy-sciencefiction"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Fantasy en sciencefiction
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/mens-en-maatschappij"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Mens en maatschappij
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/psychologie"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Psychologie
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/gezondheid"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Gezondheid
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/kennis-wetenschap"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Kennis en wetenschap
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/poezie"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Po&#xEB;zie
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/strips-en-graphic-novels"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Strips en graphic novels
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/vrije-tijd"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Vrije tijd
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/tieners"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Tieners
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/young-adult"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Young Adult
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/zwangerschap-en-opvoeding"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Zwangerschap en opvoeding
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/kunst"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Kunst
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/sport"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Sport
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/muziek"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Muziek
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/economie"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Economie
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/onderwijs-en-studieboeken"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Onderwijs en studieboeken
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/naslagwerken-en-woordenboeken"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Naslagwerken
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/boeken/doeboeken"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Doeboeken
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-67e50a65-ce38-4ef8-9b51-d7430bdd5edb sub-menu-item-with-image sub-navigation-item hidden-nav-item-xs ">
+                                        <img loading="lazy" src="/media/jq2jfxjy/vol18.png" class="img-responsive hidden-xs" alt="Lees VOL van boeken #18" width="672" height="805">
+                                        <div>
+                                                <a href="/actueel/vol-van-boeken"
+                                                   target="_self">
+                                                    Lees VOL van boeken #18
+                                                </a>
+                                        </div>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li id="18a884b8-eca8-48af-af45-9a8d46038064" class="sub-navigation-item sub-navigation-title hidden-nav-item-xs  ">
+
+                                        <h4>
+                                            <span>DIGITAAL LEZEN</span>
+                                        </h4>
+                                            <span class="icon icon-arrow-down hidden-lg"></span>
+                                </li>
+                                <li class="sub-navigation-of-18a884b8-eca8-48af-af45-9a8d46038064  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/zoek/?q=&amp;binding=20#"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Ebooks
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-18a884b8-eca8-48af-af45-9a8d46038064  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/tolino-ereaders"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Ereaders
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-18a884b8-eca8-48af-af45-9a8d46038064  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/luisterboeken"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Luisterboeken
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-18a884b8-eca8-48af-af45-9a8d46038064  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/fluister#"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Fluister, moet je horen
+                                        </a>
+                                </li>
+                                <li class="hidden-xs sub-navigation-item  ">
+                                    <div class="empty"></div>
+                                </li>
+                                <li id="8fb3eeff-1092-45b6-a0cd-88c6cb19fdd1" class="sub-navigation-item sub-navigation-title hidden-nav-item-xs  last">
+
+                                        <h4>
+                                            <span>POPULAIRE AUTEURS</span>
+                                        </h4>
+                                            <span class="icon icon-arrow-down hidden-lg"></span>
+                                </li>
+                                <li class="sub-navigation-of-8fb3eeff-1092-45b6-a0cd-88c6cb19fdd1  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/uitgelicht/tommy-wieringa/#"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Tommy Wieringa
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-8fb3eeff-1092-45b6-a0cd-88c6cb19fdd1  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/uitgelicht/anya-niewierra/"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Anya Niewierra
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-8fb3eeff-1092-45b6-a0cd-88c6cb19fdd1  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/uitgelicht/het-nieuwe-boek-van-ilja-leonard-pfeijffer/"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Ilja Leonard Pfeijffer
+                                        </a>
+                                </li>
+                                <li class="sub-navigation-of-8fb3eeff-1092-45b6-a0cd-88c6cb19fdd1  sub-navigation-item hidden-nav-item-xs ">
+                                        <a href="/actueel/uitgelicht/hanneke-de-zoete/"
+                                           target="_self"
+                                           class="sub-navigation-link">
+                                            Hanneke de Zoete
+                                        </a>
+                                </li>
+                    </ul>
+                </nav>
+            </div>
+    </li>
+
+
+
+                        </ul>
+                        <div class="hidden-lg right-side-navigation-spacing"></div>
+                        <ul class="side-navigation right-side-navigation remove-default-list-styles body-bold">
+                            
+
+
+    <li id="main-navigation-item-1-5e611daf-854f-433a-967f-0abbf638931a" class="main-navigation-item ">
+
+            <div class="navigation-item" title="Onze winkels">
+                <a href="/winkels">
+                    Onze winkels
+                    <span class="icon icon-arrow-right hidden-lg"></span>
+                </a>
+            </div>
+
+    </li>
+
+
+                        </ul>
+                        <div class="company-logo-container hidden-lg">
+                            <img loading="lazy" class="img-responsive" src="/media/eahi0ur2/libris_logo.svg" alt="Libris logo" />
+                        </div>
+                </nav>
+            </div>
+        </div>
+
+<script type="text/html" id="client-icon-template">
+     <li class="user-navigation-item position-relative">
+         <!-- DictItem: Header_AriaLabel_ProfileIconGuestUser --><a href="/login?returnUrl=https%3a%2f%2flibris.nl%2fprofiel%2fmijn-gegevens" class="link-item hidden-lg" v-on:click="toogleProfileBox" aria-label="Ga naar login">
+            <span :class="{'icon-profile-fill': isLoggedIn, 'icon-profile': !isLoggedIn}"></span>
+         </a>
+         <!-- DictItem: Header_AriaLabel_ProfileIconGuestUser --><a id="HeaderLoginButton" href="#" class="link-item hidden-xs" v-on:click="toogleProfileBox" aria-label="Ga naar login">
+          <span id="HeaderLoginIcon" :class="{'icon-profile-fill': isLoggedIn, 'icon-profile': !isLoggedIn}"></span>
+         </a>
+         
+<div id="HeaderProfileBox" class="profile-box hidden-xs" :class="{ 'hidden-all': !isProfileBoxActive}">
+        <div class="login-nav">
+            <a href="/login?returnUrl=https%3a%2f%2flibris.nl%2fprofiel%2fmijn-gegevens" class="btn btn-signal btn-medium login-button">
+                <!-- DictItem: ProfileBox_LoginButton -->Inloggen
+            </a>
+            <a href="/login?returnUrl=https%3a%2f%2flibris.nl%2fprofiel%2fmijn-gegevens" class="body-normal link">
+                <!-- DictItem: ProfileBox_OrRegisterLink -->Of registreren
+            </a>
+        </div>
+</div>
+     </li>
+</script>
+<script type="text/html" id="wishlist-summary-icon-template">
+    <span class="icon-heart"></span>
+    <span id="WishlistIconCountBubble" class="count-bubble" :class="{'hidden-all': wishlistSummary.numberOfWishlistItems == 0}">{{wishlistSummary.numberOfWishlistItems}}</span>
+</script>
+
+
+    
+
+
+<script type="module">
+    import {
+        ShopsListApp,
+    } from 'shopsListPage';
+    Vue.createApp(ShopsListApp).mount('#shops-list-page-container')
+</script>
+
+<div id="shops-list-page-container" class="shops-list-container main-nav-header grid-container">
+    <shops-list shops-list-url="/winkels" is-parent-company="is-parent-company"></shops-list>
+</div>
+
+<script type="text/html" id="shops-list-template">
+    <div class="shops-search-bar" v-if="shopId == null">
+        <div class="shops-search-section" v-if="isParentCompany">
+            <div class="search-box">
+                <!-- DictItem: ShopsList_ShopSearchTextPlaceholder --><input class="form-input" v-model="searchParameters.searchText" v-on:keyup.enter="searchShopsByText()" placeholder="Zoek winkel op postcode of plaats" />
+                <button type="button" class="search-submit" v-on:click="searchShopsByText()">
+                    <span class="icon-search"></span>
+                </button>
+            </div>
+            <button class="btn btn-primary btn-medium" v-on:click="getCurrentPosition()">
+                <!-- DictItem: ShopsList_NearbyStores -->Zoek in de buurt
+            </button>
+        </div>
+        <div class="shops-search-map" :class="{'subsite': !isParentCompany}">
+            <span v-if="!searchParameters.isMapOverview" v-on:click="searchShopsOnMap()">
+                <i class="icon-anchorpoint"></i>
+                <a><!-- DictItem: ShopsList_ShowOnMap -->Toon op kaart</a>
+            </span>
+            <span v-on:click="searchAllShops()">
+                <i class="icon-anchorpoint"></i>
+                <a v-on:click="searchAllShops()">
+                    <!-- DictItem: ShopsList_ShowAll -->Toon alle boekhandels
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="shops-list" v-if="shopId == null">
+        <div class="title-section">
+            <h1 class="h0">
+                <!-- DictItem: ShopsList_PageTitle -->Boekwinkels
+            </h1>
+            <div class="shops-search-map" v-if="!isParentCompany">
+                <span v-if="!searchParameters.isMapOverview" v-on:click="searchShopsOnMap()">
+                    <i class="icon-anchorpoint"></i>
+                    <a><!-- DictItem: ShopsList_ShowOnMap -->Toon op kaart</a>
+                </span>
+                <span v-on:click="searchAllShops()">
+                    <i class="icon-anchorpoint"></i>
+                    <a v-on:click="searchAllShops()">
+                        <!-- DictItem: ShopsList_ShowAll -->Toon alle boekhandels
+                    </a>
+                </span>
+            </div>
+        </div>
+        
+        <nav class="shops-filters-navigation">
+            <ul class="shops-filters-navigation-items">
+                <li class="shops-filters-navigation-item " :class="{'active body-bold': searchParameters.brandId == 0}">
+                    <a v-on:click="searchShopsByBrand({id: 0, name: 'Alle boekhandels' })">
+                        <!-- DictItem: ShopsList_ShopFilter_All -->Alle boekhandels
+                    </a>
+                </li>
+                <li class="shops-filters-navigation-item" :class="{active: searchParameters.brandId == brand.id}" v-for="brand in supportedBrands.filter(brand => brand.name?.length > 0)"  :key="brand.id">
+                    <a v-on:click="searchShopsByBrand(brand)">
+                        {{ brand.name }}-<!-- DictItem: ShopsList_Shops -->boekhandels
+                    </a>
+                </li>
+            </ul>
+        </nav>
+         <div class="shop-detail-location" v-if="searchParameters.isMapOverview">
+            <shops-google-map
+                :mapMarkers="shopsList"
+                :mapMarkerWidth="34"
+                :markerHeight="53">
+            </shops-google-map>
+        </div>
+        <div class="shops-list-items-container" v-if="!searchParameters.isMapOverview">
+            <div class="shops-list-item" v-for="shop in shopsList">
+                <h5 v-if="!isWhitelabel" class="shop-brand">{{ shop.brand }}-<!-- DictItem: ShopsList_Shop -->boekhandel 
+                </h5>
+                <h2 class="shop-name">{{ shop.name }}
+                </h2>
+                <div class="shop-details">
+                    <div class="shop-image" v-on:click="goToShopDetail(shop.name)">
+                        <img loading="lazy" :src="shop.featuredImageUrl" :alt="shop.name" width="246" height="165">
+                    </div>
+                    <div class="shop-info">
+                        <div class="shop-address">
+                            <span>{{ shop.address?.street }} {{ shop.address?.streetNumber }}</span>
+                            <span>{{ shop.address?.zipcode }} {{ shop.address?.city }}</span>
+                            <span class="telephone"><a :href="`tel:${shop.phoneNumber}`">{{ shop.phoneNumber }}</a></span>
+                        </div>
+                        <div class="shop-contacts">
+                            <span class="email" v-if="shop?.email?.length > 0">
+                                <a :href="'mailto:' + shop.email">{{ shop.email }}</a>
+                            </span>
+                            <span class="url" v-if="shop?.url?.length > 0">
+                                <a :href="shop.url" target="_blank">{{ getShopUrlForDisplay(shop.url) }}</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="shop-info-template">
+    <div class="shop-info" v-if="shopObject != null" :class="{ 'checkout-layout': displayCheckoutLayout }">
+        <div class="shop-basic-info" v-if="showShopBasicInfo">
+            <div class="shop-name-and-distance">
+                <span>{{ shopObject.name }}</span>
+                <span v-if="shopObject.distance > 0" class="body-small shop-distance hidden-xs">
+                    {{ locationService.parseDistance(shopObject.distance) }}
+                </span>
+            </div>
+            <div>{{ shopObject.address?.street }} {{ shopObject.address?.streetNumber }} </div>
+            <div>{{ shopObject.address?.zipcode }} {{ shopObject.address?.city }}</div>
+        </div>
+        <shop-schedule v-if="showSchedule" :shop-object="shopObject" :show-schedule-title="showScheduleTitle">
+        </shop-schedule>
+        <shop-contacts v-if="showContacts" :shop-object="shopObject" :display-checkout-layout="displayCheckoutLayout"></shop-contacts>
+    </div>
+</script>
+<script type="text/html" id="shops-google-map-template">
+    <div class="shops-google-map" :id="canvasContainerId">
+
+    </div>
+</script>
+    
+
+
+<footer class="main-footer">
+    <input id="isCheckoutContextField" type="hidden" data-val="true" data-val-required="The Boolean field is required." name="isCheckoutContext" value="False" />
+    <div class="grid-container">
+            <div class="footer-sections">
+
+                
+
+    <div class="footer-section customer-service-section mobile-closed">
+        <div class="customer-service">
+            <div class="title mobile-expand-toggle">
+                <h5 class="uppercase">
+                    Klantenservice Libris
+                </h5>
+                <!-- DictItem: Footer_AriaLabel_OpenSubmenu --><button class="hidden-lg" aria-label="Open Submenu">
+                    <span class="icon-arrow-down"></span>
+                </button>
+            </div>
+            <div class="content">
+                    <ul class="remove-default-list-styles body-small">
+                                <li>
+                                    maandag t/m vrijdag: 09.00 - 17.00 uur
+                                </li>
+                                <li>
+                                    <!-- DictItem: Footer_Label_CustomerServiceEmail -->E-mail
+                                    <a href="/cdn-cgi/l/email-protection#7c17101d120819120f190e0a151f193c10151e0e150f521210"><span class="__cf_email__" data-cfemail="c2a9aea3acb6a7acb1a7b0b4aba1a782aeaba0b0abb1ecacae">[email&#160;protected]</span></a>
+                                </li>
+                                <li>
+                                    <!-- DictItem: Footer_Label_CustomerServicePhoneNumber -->Telefoon
+                                    <a href="tel:033-2532300">033-2532300</a>
+                                </li>
+                </ul>
+        </div>
+    </div>
+            </div>
+
+
+                
+
+        <div class="footer-section second-menu-list-section menu-list mobile-closed">
+            <div class="title mobile-expand-toggle">
+                <h5 class="uppercase">Over Libris.nl</h5>
+                <!-- DictItem: Footer_AriaLabel_ToggleMobileMenuButton --><button type="submit" class="mobile-expand hidden-lg" aria-label="Toggle mobile menu">
+                    <span class="icon-arrow-down"></span>
+                </button>
+            </div>
+                <div class="content body-small">
+                    <ul class="remove-default-list-styles">
+                            <li><a href="https://zoekeenboek.libris.nl/">Zoek in onze winkels</a></li>
+                            <li><a href="/koop-lokaal-ook-online">Koop lokaal</a></li>
+                            <li><a href="/zakendoen-met-librisnl">Zakendoen met Libris.nl</a></li>
+                            <li><a href="/vacatures">Vacatures</a></li>
+                            <li><a href="/contact-libris-blz-bv">Contact Libris Blz. B.V.</a></li>
+                            <li><a href="/media/hanicqx2/ekcodeofconductlibrisblznlen_v2.pdf">Code of Conduct</a></li>
+                    </ul>
+                </div>
+            
+        </div>
+
+                
+
+<div class="footer-section newsletter-social-section">
+    <div class="newsletter-form">
+        <h5 class="uppercase">
+            <!-- DictItem: Footer_Title_SignUpNewsletter -->Schrijf je in voor onze nieuwsbrief
+        </h5>
+        <form id="redirectToNewsletterPageForm">
+            <div class="content">
+                <!-- DictItem: Newsletter_Placeholder_Email --><input name="Email" required class="body-small" type="email" data-val="true" data-val-email="E-mailadres is niet geldig" data-val-required="E-mailadres is vereist." id="FooterInfo_NewsletterSubscriptionModel_Email" value="" placeholder="Je e-mailadres" />
+                <!-- DictItem: Footer_AriaLabel_SubmitNewsletterButton --><button type="submit" class="btn btn-footer" aria-label="Aanmelden nieuwsbrief">
+                    <span class="icon-arrow-right"></span>
+                </button>
+            </div>
+            <div>
+                <span class="body-small field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+            </div>
+        </form>
+    </div>
+
+            <div class="social-links">
+                <h5 class="uppercase hidden-xs">
+                    <!-- DictItem: Footer_Title_SocialMedia -->Volg ons
+                </h5>
+                <div class="social-icons">
+                        <a href="https://www.facebook.com/librisnieuws/">
+                            <!-- DictItem: Footer_AriaLabel_FacebookIcon --><span class="icon-facebook" aria-label="Bezoek onze Facebook">
+                            </span>
+                        </a>
+                        <a href="https://twitter.com/librisnieuws">
+                            <!-- DictItem: Footer_AriaLabel_TwitterIcon --><span class="icon-X-logo" aria-label="Bezoek onze Twitter">
+                            </span>
+                        </a>
+                        <a href="https://www.instagram.com/librisnieuws">
+                            <!-- DictItem: Footer_AriaLabel_InstagramIcon --><span class="icon-instagram" aria-label="Bezoek onze Instagram">
+                            </span>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC6lQZV7iw2p2Yn88vKbUg8g">
+                            <!-- DictItem: Footer_AriaLabel_YoutubeIcon --><span class="icon-youtube" aria-label="Bezoek onze YouTube">
+                            </span>
+                        </a>
+
+                        <a href="https://www.tiktok.com/@librisnieuws">
+                            <!-- DictItem: Footer_AriaLabel_TiktokIcon --><span class="icon-tiktok" aria-label="Visit our Tiktok">
+                            </span>
+                        </a>
+
+                </div>
+            </div>
+</div>
+
+                
+
+        <div class="footer-section second-menu-list-section menu-list mobile-closed">
+            <div class="title mobile-expand-toggle">
+                <h5 class="uppercase">Veelgestelde vragen</h5>
+                <!-- DictItem: Footer_AriaLabel_ToggleMobileMenuButton --><button type="submit" class="mobile-expand hidden-lg" aria-label="Toggle mobile menu">
+                    <span class="icon-arrow-down"></span>
+                </button>
+            </div>
+                <div class="content body-small">
+                    <ul class="remove-default-list-styles">
+                            <li><a href="/contact-winkel">Stel een vraag aan de boekhandel</a></li>
+                            <li><a href="/klantenservice/bestellen-en-betalen">Bestellen en betalen</a></li>
+                            <li><a href="/klantenservice/afhalen-en-bezorgen">Afhalen en bezorgen</a></li>
+                            <li><a href="/klantenservice/retourneren-en-herroepingsrecht">Retourneren en herroepingsrecht</a></li>
+                            <li><a href="/klantenservice/bestelling-annuleren">Bestelling annuleren</a></li>
+                    </ul>
+                </div>
+            
+        </div>
+
+
+            </div>
+
+            <div class="company-logo">
+                <span class="separator"></span>
+                <img loading="lazy" class="img-responsive" src="/media/5qznhov5/librisblz-logo-combi.svg" alt="Libris logo" width="80" height="50" />
+                <span class="separator"></span>
+            </div>
+    </div>
+    <div class="other-links body-small">
+        <span class="content">
+            <img loading="lazy" src="/media/thuiswinkel-logo.png" alt="Logo Thuiswinkel" width="12" height="11" />
+            <a href="https://www.thuiswinkel.org/">
+                <!-- DictItem: Footer_Link_Guarantee -->Thuiswinkel Waarborg
+            </a>
+        </span>
+
+            <span> | </span>
+            <span class="content"><a href="/algemene-voorwaarden">Algemene voorwaarden</a></span>
+            <span> | </span>
+            <span class="content"><a href="/privacy">Privacy</a></span>
+            <span> | </span>
+            <span class="content"><a href="/cookies">Cookies</a></span>
+
+        <span>|</span>
+        <span class="content">
+            Libris is aangesloten bij Libris.nl &#xA9; 2025
+        </span>
+    </div>
+</footer>
+    
+
+<div id="cookie-consent-popup" class="full-page-popup cookie-popup hidden-all">
+    <div class="content-container small">
+            <div class="company-logo">
+                <img class="img-responsive" src="/media/eahi0ur2/libris_logo.svg" alt="Libris" width="96" height="28" />
+            </div>
+
+            <div class="text-content">
+                <h2>Beste boekenliefhebber,</h2>
+<p>Wat leuk dat je er bent! Om onze website te laten functioneren maken we gebruik van cookies. Kies hieronder welke cookies we mogen plaatsen.&nbsp;</p>
+<p>Onze noodzakelijke cookies verzamelen geen persoonsgegevens en helpen ons de website te verbeteren. Wil je de beste website-ervaring? Kies dan voor alle cookies.&nbsp;</p>
+<p>Meer informatie vind je in ons&nbsp;<a href="/privacy/">cookiebeleid</a>.</p>
+<p>Geef eventueel je voorkeuren aan:</p>
+            </div>
+
+        <div class="tracking-options">
+            <div class="option disabled">
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="functionalityCookies" value="functional_cookies" checked="checked" disabled="disabled" />
+                    <label for="functionalityCookies" class="checkmark"></label>
+                </div>
+                <label class="body-normal text" for="functionalityCookies" disabled="disabled">
+                    <!-- DictItem: CookiePopup_FunctionalCookies -->Noodzakelijke cookies
+                </label>
+            </div>
+
+            <div class="option">
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="analyticsCookies" value="analytics_cookies" checked/>
+                    <label for="analyticsCookies" class="checkmark"></label>
+                </div>
+                <label class="body-normal text" for="analyticsCookies">
+                    <!-- DictItem: CookiePopup_AnalyticsCookies -->Analytische cookies
+                </label>
+            </div>
+
+            <div class="option">
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="personalizationAndMarketingCookies" value="personalizationAndMarketing_cookies" checked />
+                    <label for="personalizationAndMarketingCookies" class="checkmark"></label>
+                </div>
+                <label class="body-normal text" for="personalizationAndMarketingCookies">
+                    <!-- DictItem: CookiePopup_PersonalizationAndMarketingCookies -->Personalisatie en Marketing
+                </label>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button id="cookie-consent-accept-all" class="btn btn-signal btn-full-width">
+                <!-- DictItem: CookiePopup_AcceptCookiesButton -->Accepteer alle cookies
+            </button>
+            <button id="cookie-consent-accept-selected" class="btn btn-signal-2 btn-full-width">
+                <!-- DictItem: CookiePopup_AcceptSelectionButton -->Selectie accepteren
+            </button>
+        </div>
+    </div>
+</div>
+
+
+    
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/dependencies/footer.js?v=nEenZ-KOvMwgsRIRCSE9pyCdYoZFrDPxd1qx9EM2FKM"></script>
+
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0VZVvLXNZPkx72uu77BxUJoMla6ttdxg&amp;callback=Function.prototype"></script>
+
+        
+<script src="/sb/core-libris.js.vdc73903af06e2a6c98c27f04b11936ac2ae6ca31"></script>    
+
+    
+
+
+    
+
+    
+<script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-54D8W4');</script>
+<!-- End Google Tag Manager -->
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54D8W4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+    
+
+<script type="text/html" id="add-wishlist-item-template">
+    <div class="add-wishlist-item heart-button" style="cursor: pointer;" v-on:click="openPopup('false', '/login')">
+        <span :class="{'add-wishlist-item-heart': true, 'icon-heart-fill': isInWishlist, 'icon-heart': !isInWishlist}"></span>
+        <span v-if="showIconText" class="add-wishlist-item-heart-text hidden-xs">
+            <!-- DictItem: Wishlist_AddWishlistItem_IconText -->Naar verlanglijst
+        </span>
+    </div>
+    <div class="full-page-popup wishlist-popup-w450 add-wishlist-item" v-if="isAddWishlistItemPopupActive" v-on:mousedown.self="isAddWishlistItemPopupActive = false">
+        <div class="content-container" v-on:click.stop="">
+            <div class="header">
+                <h3 class="title">
+                    <!-- DictItem: Wishlist_AddWishlistItem_Title -->Kies een verlanglijst
+                </h3>
+                <div class="close-popup" v-on:click="isAddWishlistItemPopupActive = false">
+                    <span class="icon-close"></span>
+                </div>
+            </div>
+            <div class="content">
+                <span class="add-wishlist-item-desc">
+                  <!-- DictItem: Wishlist_AddWishlistItem_Desc -->Voeg <b>{{ title }}</b> toe aan:
+                </span>
+                <div class="add-wishlist-item-wishlists">
+                <template v-for="(wishlist, index) in wishlists">
+                    <div class="add-wishlist-item-wishlist">
+                        <span class="add-wishlist-item-wishlist-name body-bold">{{ wishlist.name }}</span>
+                        <span :class="{'add-wishlist-item-wishlist-selection': true, 'icon-heart-fill': wishlist.hasIsbn, 'icon-heart': !wishlist.hasIsbn}" v-on:click="addRemoveIsbn(wishlist)"></span>
+                    </div>
+                </template>
+                </div>
+                <span class="add-wishlist-item-info" v-if="!isIsbnInWishlist">
+                    <!-- DictItem: Wishlist_AddWishlistItem_ClickToAdd -->Klik op een hartje om het artikel aan één of meerdere lijsten toe te voegen.
+                </span>
+                <span class="add-wishlist-item-info" v-if="isIsbnInWishlist && wishlists.length == 1">
+                    <!-- DictItem: Wishlist_AddWishlistItem_AddedToWishlist -->Het artikel staat op al je verlanglijsten
+                </span>
+                <div class="add-wishlist-item-add-wishlist-link wishlist-action-link" v-on:click="isAddWishlistPanelActive = !isAddWishlistPanelActive">
+                    <span>+  </span>
+                    <a href="#" class="wishlist-action-link-no-underline" v-on:click.prevent="">
+                        <!-- DictItem: Wishlist_AddWishlistItem_AddWishlist -->Zet op een nieuwe verlanglijst
+                    </a>
+                </div>
+                <div class="add-wishlist-item-add-wishlist" v-if="isAddWishlistPanelActive">
+                    <form v-on:submit.prevent="processAddWishlistSubmit()">
+                        <!-- DictItem: FormFields_AddWishlistItem_NamePlaceholder --><input type="text" class="form-input" v-model="formNewWishlistObject.name" placeholder="Nieuwe naam verlanglijst" />
+                        <button type="submit" class="btn btn-primary btn-medium">
+                            bevestigen
+                        </button>
+                    </form>
+                    <div class="field-validation-error" v-if="errors.isEmptyName == true">
+                            <!-- DictItem: FormErrors_EmptyWishlistTitle -->Naam verlanglijst is vereist.
+                           </div>
+                           <hr class="hidden-lg" />
+                </div>
+                
+                 <div class="buttons">
+                    <button type="button" class="btn btn-primary btn-medium close-button" v-on:click="isAddWishlistItemPopupActive = false">
+                        <!-- DictItem: Wishlist_ContinueShopping_Button -->verder winkelen
+                    </button>
+                    <button type="button" class="btn btn-primary btn-medium submit-button" v-on:click="goToWishlists('/profiel/mijn-verlanglijsten')">
+                        <!-- DictItem: Wishlist_AddWishlistItem_GoToWishlists_Button -->naar verlanglijsten
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+    <script type="text/html" id="banner-carousel-template">
+
+</script>
+
+    <script type="text/html" id="studybooks-container">
+<div class="studybooks-container">
+<div class="studybooks-selection" v-if="!showBookList">
+    <div class="studybooks-options grid-row" v-if="studyBookGroups != null" v-for="(group, index) in studyBookGroups.choices">
+        <select class="form-input grid-column-6 grid-column-xs-4" v-on:change="onOptionChange($event, index)" v-model="selectedChoices[index]">
+            <option v-if="group.defaultOption != null" :value="-1" disabled="disabled">
+                {{ group.defaultOption }}
+            </option>
+            <option v-for="choice in group.choices" :value="choice.value">
+                {{ choice.name }}
+            </option>
+        </select>
+    </div>
+    <div class="studybooks-button-container" v-if="canGetBookList">
+        <button class="btn btn-primary" v-on:click="getStudyBooksListByPath()">
+            <!-- DictItem: Studybooks_GetStudybookListBtn -->Selecter je boeken | Select your books
+        </button>
+    </div>
+    <div class="studybooks-booklist-error-message" v-if="bookListNotFound">
+        <!-- DictItem: Studybooks_Booklist_NotFound -->Er zijn geen boeken gevonden voor de geselecteerde lijst. | No books found for the selected list.
+    </div>
+</div>
+<Transition>
+<div class="studybooks-list" v-if="showBookList">
+
+<div class="studybooks-list-selection-container" v-on:click="selectAllMandatoryBooks()">
+    <div>
+        <input type="checkbox" v-model="areAllBooksSelected"/>
+        <!-- DictItem: Studybooks_Selection_SelectAllMandatoryBooks -->Select alle verplichte boeken | Select all mandatory books
+    </div>
+    <div v-if="studyBooksList.showMembershipCheckbox && initialHash == 'A'">
+        <input type="checkbox" name="hasMembership" id="hasMembership" value="true" v-model="studyBooksList.alreadyHaveMembership"/>
+        <label for="hasMembership">
+            <!-- DictItem: Studybooks_AddMembership -->Ik ben lid van dit lidmaatschap en hebben al de kosten die ermee verbonden zijn betaald. | I am a member of this membership and have already paid the fees associated with it.
+        </label>
+    </div>
+</div>
+
+<div class="studybooks-grid-header">
+    <div class="grid-row">
+        <div class="grid-column-4 hidden-xs">
+            <!-- DictItem: Studybooks_Header_Author -->Auteur | Author
+        </div>
+        <div class="grid-column-3 hidden-xs">
+            <!-- DictItem: Studybooks_Header_Title -->Titel | Title
+        </div>
+        <div class="grid-column-xs-2 hidden-lg"></div>
+        <div class="grid-column-5 grid-column-xs-2">
+            <div class="grid-row">
+                <div class="grid-column-6 hidden-xs text-center">
+                    <!-- DictItem: Studybooks_Header_Status -->Status
+                </div>
+                <div class="grid-column-3 hidden-xs text-center">
+                    <!-- DictItem: Studybooks_Header_Price -->Prijs | Price
+                </div>
+                <div class="grid-column-xs-1 hidden-lg"></div>
+                <div class="grid-column-3 grid-column-xs-3 text-center">
+                    <!-- DictItem: Studybooks_Header_Select -->Selecteren | Select
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="studybooks-grid-body">
+    <div class="studybooks-grid-section" v-for="section in studyBooksList.sections">
+        <div class="section-title">
+            {{ section.title }}
+        </div>
+        <div class="section-booklist" v-for="bookList in section.bookLists">
+            <div class="booklist-title">
+                <!-- DictItem: Studybooks_Body_Title_Prefix -->Vak: 
+                {{ bookList.title }}
+            </div>
+            <div class="section-booklist-item" v-bind:class="{'out-of-stock-item': item.outOfStock}" v-for="item in bookList.items">
+                <div v-if="item.isbn != null" class="grid-row" :ref="`isbn-${item.isbn}`">
+                    <div class="grid-column-4 grid-column-xs-1">
+                        <div class="grid-row">
+                            <div class="grid-column-1 grid-column-xs-1" style="width: 95px;">
+                                <img loading="lazy" class="img-responsive" v-bind:src="item.bookCover">
+                            </div>
+                            <div class="grid-column-11 hidden-xs">
+                                {{ item.author ?? "N/A" }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-column-xs-2 product-information hidden-lg">
+                        <div class="body-small product-information-header">
+                            <div class="body-bold">
+                                {{ item.title ?? "N/A" }}
+                            </div>
+                            <div>
+                                {{ item.author ?? "N/A" }}
+
+                                <p class="out-of-stock-message" v-if="item.outOfStock">
+                                    <!-- DictItem: Studybooks_Body_OutOfStockItem -->Dit boek is niet op voorraad.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="body-small product-information-footer">
+                            <div>
+                                <div v-if="initialHash == 'A'">
+                                    <del ng-if="item.originalPrice > item.price">{{ item.formattedOriginalPrice }}</del>&nbsp;
+                                    <strong>{{ item.formattedPrice }} </strong>
+                                </div>
+                                <strong v-else-if="!studentDiscountFeatureActive">{{ item.formattedPrice }} </strong>
+                                <div v-else-if="studentDiscountFeatureActive">
+                                    <strong>{{ item.formattedPriceWithStudentDiscount }}</strong>&nbsp;
+                                    <small>
+                                        <del>{{ item.formattedPrice }}</del>
+                                    </small>
+                                </div>
+                                <span v-if="item.mandatoryStatus === 0 || item.mandatoryStatus === 1 || item.mandatoryStatus === 2"> - </span>
+                                <span v-if="item.mandatoryStatus === 0">
+                                    <!-- DictItem: Studybooks_MandatoryEnum_Optional -->Verplicht keuze | Mandatory option
+                                </span>
+                                <span v-if="item.mandatoryStatus === 1">
+                                    <!-- DictItem: Studybooks_MandatoryEnum_Mandatory -->Verplicht | Mandatory
+                                </span>
+                                <span v-if="item.mandatoryStatus === 2">
+                                    <!-- DictItem: Studybooks_MandatoryEnum_Recommended -->Aanbevolen | Recommended
+                                </span>
+                                <span class="icon-information"></span>
+                                <span class="icon-label">{{ item.isbn }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-column-3 hidden-xs">
+                        {{ item.title ?? "N/A" }}
+
+                        <p class="out-of-stock-message" v-if="item.outOfStock">
+                            <!-- DictItem: Studybooks_Body_OutOfStockItem -->Dit boek is niet op voorraad.
+                        </p>
+                    </div>
+                    <div class="grid-column-5 grid-column-xs-1">
+                        <div class="grid-row">
+                            <div class="grid-column-6 text-center hidden-xs">
+                                <span v-if="item.mandatoryStatus === 0">
+                                    <!-- DictItem: Studybooks_MandatoryEnum_Optional -->Verplicht keuze | Mandatory option
+                                </span>
+                                <span v-if="item.mandatoryStatus === 1">
+                                    <!-- DictItem: Studybooks_MandatoryEnum_Mandatory -->Verplicht | Mandatory
+                                </span>
+                                <span v-if="item.mandatoryStatus === 2">
+                                    <!-- DictItem: Studybooks_MandatoryEnum_Recommended -->Aanbevolen | Recommended
+                                </span>
+                                <span class="icon-information"></span>
+                                <span class="icon-label">{{ item.isbn }}</span>
+                            </div>
+                            <div class="grid-column-3 text-center hidden-xs">
+                                <div v-if="initialHash == 'A'">
+                                    <div>
+                                        <strong>{{ item.formattedPrice }} </strong>
+                                    </div>
+                                    <div ng-if="item.originalPrice > item.price">
+                                        <del>{{ item.formattedOriginalPrice }}</del>
+                                    </div>
+                                </div>
+                                <strong v-else-if="!studentDiscountFeatureActive">{{ item.formattedPrice }} </strong>
+                                <div v-else-if="studentDiscountFeatureActive">
+                                    <div>
+                                        <strong>{{ item.formattedPriceWithStudentDiscount }}</strong>
+                                    </div>
+                                    <div>
+                                        <small>
+                                            <del>{{ item.formattedPrice }}</del>
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="hidden-lg">
+                                    <input type="checkbox" v-model="item.isSelected">
+                                </div>
+                            </div>
+                            <div class="grid-column-3 grid-column-xs-4 text-center">
+                                <input type="checkbox" v-model="item.isSelected">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div v-else class="grid-row" >
+                    <div class="grid-column-12 grid-column-xs-4">
+                        {{ item.title }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="studybooks-booklist-buttons" ref="studybooksButtons">
+        <button class="btn btn-secondary" v-on:click="returnToBookListSelection()">
+            <!-- DictItem: Studybooks_BackBtn -->Terug | Back
+        </button>
+        <button class="btn btn-primary" :disabled="!canAddToCart()" v-on:click="addSelectionToCart()">
+            <!-- DictItem: Studybooks_OrderBtn -->Bestellen/Reserveren | Order
+        </button>
+    </div>
+
+    <div class="error-message" v-if="onAddToCartError != null">
+        <p>
+            <!-- DictItem: Studybooks_UnknownError -->Er is een onbekende fout opgetreden tijdens het toevoegen van artikelen aan het winkelmandje.
+        </p>
+        <p>
+            {{ onAddToCartError }}
+        </p>
+    </div>
+</div>
+</div>
+</Transition>
+</div>
+</script>
+    
+<script type="text/html" id="book-add-to-cart-button-template">
+    <div class="add-to-cart-button">
+        <template v-if="redirectToPdp">
+            <a class="btn btn-large btn-full-width btn-signal" :href="bookPageUrl">
+                {{ redirectToPdpButtonText }}
+            </a>
+        </template>
+    
+        <template v-if="!redirectToPdp">
+            <a :href="unorderableRedirectUrl" v-if="!isOrderable">
+                <button class="btn" v-bind:class="buttonHtmlClasses">
+                    <div>{{unorderableButtonText}}</div>
+                </button>
+            </a>
+            <button :disabled="disableButton" class="btn" v-if="isOrderable" v-bind:class="buttonHtmlClasses" v-on:click="addToCart(isbn, copyId, productType, productStockState)"
+                    :data-isbn="isbn" :data-booktitle="title">
+                <div v-if="includeIcon" class="icon-bag"></div>
+                <div>{{buttonText}}</div>
+               
+
+            </button>
+            
+            <div class="full-page-popup add-to-cart-popup" v-if="isAddToCartPopupOpen" v-on:mousedown.self="isAddToCartPopupOpen = false">
+                <div class="content-container">
+                    <div class="header">
+                        <div class="success-message" v-if="!noStockAvailable">
+                            <span class="icon-check"></span>
+                            <span class="message">
+                                <!-- DictItem: AddToCart_SuccessMessage -->Het artikel is aan je winkelmandje toegevoegd
+                            </span>
+                        </div>
+                        <div class="error-message" v-if="noStockAvailable">
+                            <span class="icon-close"></span>
+                            <span class="message">
+                                <!-- DictItem: AddToCart_NoStockMessage -->Het artikel is niet op voorraad.
+                            </span>
+                        </div>
+                        <div class="close-popup" v-on:click="isAddToCartPopupOpen = false">
+                            <span class="icon-close"></span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="book-already-added-to-cart" v-if="bookAlreadyInCart">
+                            <!-- DictItem: AddToCart_AlreadyAdded_ExemplaarText -->1 exemplaar van
+                            <i class="book-title body-bold">{{ title }}</i>
+                            <!-- DictItem: AddToCart_AlreadyAdded_AddedText -->is toegevoegd aan het winkelmandje.
+                        </div>
+                        <div class="book-info" v-if="!bookAlreadyInCart">
+                            <div class="cover cart-popup">
+                                 <img loading="lazy"   width="95" height="auto" onerror="setDefaultImage(this, 'https://mindbooks.blob.core.windows.net/media/libris/image-not-available-nl-NL.png')"  v-bind:src='coverUrl'/>
+ 
+                            </div>
+                            <div class="title-author-price">
+                                <div class="title body-small">{{title }}</div>
+                                <div class="author body-small">{{author }}</div>
+                                <div class="price" v-if="updatedPrice != null">{{updatedPrice}}</div>
+                            </div>
+                        </div>
+                        <div class="action-buttons" v-if="!noStockAvailable">
+                            <button class="btn btn-full-width orange-button close-add-to-cart-popup" v-on:click="isAddToCartPopupOpen = false">                         
+                                <!-- DictItem: AddToCart_ContinueShopping -->Verder winkelen
+                            </button>
+                            <a class="btn btn-full-width orange-button" href="/winkelwagen">
+                                <!-- DictItem: AddToCart_GoToShoppingCart -->Bekijk winkelmandje
+                            </a>
+                        </div>
+                        <div class="retail-rocket-container">
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-to-cart-sticky-container hidden-lg" v-if="showStickyAddToCartContainer">
+                <div class="book-info">
+                    <div class="image-wrapper">
+                        <img class="img-responsive" :src="coverUrl" width="31" height="48" :alt="title" onerror="setDefaultImage(this, 'https://mindbooks.blob.core.windows.net/media/libris/image-not-available-nl-NL.png')"/>
+                    </div>
+                    <div class="content">
+                        <div class="binding">{{ bindingDescription }}</div>
+                        <div class="price">{{ price }}</div>
+                    </div>
+                </div>
+                <div class="add-to-cart-button">
+                    <button class="btn" v-if="isOrderable" v-bind:class="buttonHtmlClasses" v-on:click="addToCart(isbn, copyId, productType, productStockState)"
+                            :data-isbn="isbn" :data-booktitle="title">
+                        <div v-if="includeIcon" class="icon-bag"></div>
+                        <div>{{buttonText}}</div>
+                    </button>
+                </div>
+            </div>
+        </template>
+    </div>
+</script>
+    <p style="display:none;">Hostname: pro-mbooks3</p>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a083f978bc10ea8',t:'MTc2MzQ3NzA5Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

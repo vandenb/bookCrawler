@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Example - Bookstore Finder Widget</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        .widget-container {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zanger Ronald zingt de blues</h1>
+
+    <p>
+        Een nieuwe bundel van Walter van den Berg. Verhalen over muziek, verlies en
+        de kleine momenten die alles veranderen.
+    </p>
+
+    <p>
+        <strong>Bestel bij een boekhandel in de buurt:</strong>
+    </p>
+
+    <!-- Widget container -->
+    <div id="bookstore-widget" class="widget-container"></div>
+
+    <p>
+        Of bestel online bij <a href="https://www.bol.com" target="_blank">bol.com</a>.
+    </p>
+
+    <!-- Include the widget script -->
+    <script src="bookstore-finder-embed.js"></script>
+    <script>
+        // Initialize the widget
+        BookstoreFinder.init({
+            container: '#bookstore-widget',
+            dataUrl: '../data/bookstores.json'
+        });
+    </script>
+</body>
+</html>

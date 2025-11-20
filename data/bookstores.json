@@ -1,0 +1,1340 @@
+[
+  {
+    "name": "Athenaeum Boekhandel & Nieuwscentrum",
+    "product_url": "https://athenaeumscheltema.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1012 XA",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Athenaeum Boekhandel Zuidoost",
+    "product_url": "https://athenaeumscheltema.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1102 ML",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Boekhandel het Martyrium",
+    "product_url": "https://athenaeumscheltema.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1071 BH",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Boekhandel Scheltema",
+    "product_url": "https://athenaeumscheltema.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1012 KK",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Athenaeum Boekhandel Haarlem",
+    "product_url": "https://athenaeumscheltema.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2011 GT",
+    "city": "Haarlem"
+  },
+  {
+    "name": "Paagman Gouda",
+    "product_url": "https://www.paagman.nl/product/82702148/zanger-ronald-zingt-de-blues-door-walter-van-den-berg",
+    "postal_code": "2801 KE",
+    "city": "Gouda"
+  },
+  {
+    "name": "Paagman Den Haag",
+    "product_url": "https://www.paagman.nl/product/82702148/zanger-ronald-zingt-de-blues-door-walter-van-den-berg",
+    "postal_code": "2582 CB",
+    "city": "Den Haag"
+  },
+  {
+    "name": "Paagman Delft",
+    "product_url": "https://www.paagman.nl/product/82702148/zanger-ronald-zingt-de-blues-door-walter-van-den-berg",
+    "postal_code": "2611 JD",
+    "city": "Delft"
+  },
+  {
+    "name": "Van der Meulen's Boekhandel",
+    "product_url": "https://libris.nl/vandermeulen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1811 JD",
+    "city": "Alkmaar"
+  },
+  {
+    "name": "Boekhandel Van den Brink",
+    "product_url": "https://libris.nl/vandenbrink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9163 GZ",
+    "city": "Ameland"
+  },
+  {
+    "name": "Boekhandel Veenendaal",
+    "product_url": "https://libris.nl/veenendaal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3811 AB",
+    "city": "Amersfoort"
+  },
+  {
+    "name": "De Algemene Boekhandel",
+    "product_url": "https://libris.nl/dealgemeneboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3817 KE",
+    "city": "Amersfoort"
+  },
+  {
+    "name": "Boekhandel Libris Venstra",
+    "product_url": "https://www.venstra.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1181 ZM",
+    "city": "Amstelveen"
+  },
+  {
+    "name": "Boekhandel Mulder",
+    "product_url": "https://libris.nl/boekhandel-mulder/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1071 JH",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Boekhandel van Noord",
+    "product_url": "https://libris.nl/boekhandelvannoord/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1025 EW",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Boekhandel Van Rossum",
+    "product_url": "https://athenaeumscheltema.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1077 JH",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Boekholt A la Carte",
+    "product_url": "https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1011 HB",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "De Amsterdamse Boekhandel",
+    "product_url": "https://libris.nl/de-amsterdamse-boekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1081 AC",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "De Dolfijn",
+    "product_url": "https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1013 JG",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "IJBURG BOEKEN",
+    "product_url": "https://libris.nl/ijburgboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1087 BS",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Island Boekholt",
+    "product_url": "https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1015 LT",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Pantheon Boekholt",
+    "product_url": "https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1011 HB",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Relay Amsterdam CS IJ-passage",
+    "product_url": "https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1012 AB",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Relay Amsterdam CS Middentunnel",
+    "product_url": "https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1012 AB",
+    "city": "Amsterdam"
+  },
+  {
+    "name": "Stad Leest",
+    "product_url": "https://libris.nl/antwerpen-stadleest/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2000",
+    "city": "Antwerpen"
+  },
+  {
+    "name": "Nawijn & Polak",
+    "product_url": "https://libris.nl/nawijn-polak/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7311 LR",
+    "city": "Apeldoorn"
+  },
+  {
+    "name": "Primera BLZ Westra Kerschoten",
+    "product_url": "https://libris.nl/boekhandel-westra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7316 HL",
+    "city": "Apeldoorn"
+  },
+  {
+    "name": "Primera BLZ Westra Orden",
+    "product_url": "https://libris.nl/boekhandel-westra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7312 NL",
+    "city": "Apeldoorn"
+  },
+  {
+    "name": "Van der Velde Boeken Assen",
+    "product_url": "https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9401 JL",
+    "city": "Assen"
+  },
+  {
+    "name": "Primera Boekhandel Avenhorn",
+    "product_url": "https://libris.nl/boekhandel-avenhorn/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1633 DT",
+    "city": "Avenhorn"
+  },
+  {
+    "name": "Boekhandel Den Boer",
+    "product_url": "https://libris.nl/denboer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3743 BC",
+    "city": "Baarn"
+  },
+  {
+    "name": "Boekhandel Jaspers",
+    "product_url": "https://libris.nl/boekhandeljaspers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1171 CH",
+    "city": "Badhoevedorp"
+  },
+  {
+    "name": "Primera boekhandel De Gele Klap",
+    "product_url": "https://libris.nl/boekhandel-de-gele-klap/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9781 AA",
+    "city": "Bedum"
+  },
+  {
+    "name": "Van den Heuvel Boek en Kantoor",
+    "product_url": "https://libris.nl/vdhboekenkantoor/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5741 CP",
+    "city": "Beek en Donk"
+  },
+  {
+    "name": "Het Logboek",
+    "product_url": "https://libris.nl/hetlogboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9411 KL",
+    "city": "Beilen"
+  },
+  {
+    "name": "Boekhandel Thomas",
+    "product_url": "https://libris.nl/thomas/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1861 GA",
+    "city": "Bergen"
+  },
+  {
+    "name": "Boekhandel Quist",
+    "product_url": "https://libris.nl/quistboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4611 NP",
+    "city": "Bergen op Zoom"
+  },
+  {
+    "name": "Kantoorboekhandel Van Atten (Berkel en Rodenrijs)",
+    "product_url": "https://libris.nl/vanattenboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2651 CE",
+    "city": "Berkel en Rodenrijs"
+  },
+  {
+    "name": "Boek- en Kantoorboekhandel Mieke Wijgergangs",
+    "product_url": "https://libris.nl/miekewijgergangs/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5258 AX",
+    "city": "Berlicum"
+  },
+  {
+    "name": "Blaricumsche Boekhandel",
+    "product_url": "https://libris.nl/blaricumscheboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1261 AW",
+    "city": "Blaricum"
+  },
+  {
+    "name": "Libris Buitelaar Breda",
+    "product_url": "https://libris.nl/librisbuitelaar/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4811 XL",
+    "city": "Breda"
+  },
+  {
+    "name": "Relay Breda",
+    "product_url": "https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4811 BN",
+    "city": "Breda"
+  },
+  {
+    "name": "Van Kemenade & Hollaers (Ginnekenweg)",
+    "product_url": "https://libris.nl/vankemenade-hollaers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4818 JG",
+    "city": "Breda"
+  },
+  {
+    "name": "Boekhandel Breskens",
+    "product_url": "https://libris.nl/boekhandelbreskens/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4511 AP",
+    "city": "Breskens"
+  },
+  {
+    "name": "Boek en Kantoor Marinus van Kralingen",
+    "product_url": "https://libris.nl/vankralingen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3621 AR",
+    "city": "Breukelen"
+  },
+  {
+    "name": "Boekhandel Bosman Brummen - Primera XL",
+    "product_url": "https://libris.nl/boekhandel-xl-brummen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6971 AB",
+    "city": "Brummen"
+  },
+  {
+    "name": "Van Ravenswaay books & more",
+    "product_url": "https://libris.nl/ravenswaay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3981 EP",
+    "city": "Bunnik"
+  },
+  {
+    "name": "Boekhandel Los",
+    "product_url": "https://libris.nl/los/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1404 CM",
+    "city": "Bussum"
+  },
+  {
+    "name": "Boekhandel Derde Druk",
+    "product_url": "https://libris.nl/derdedruk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2903 AD",
+    "city": "Capelle aan den IJssel"
+  },
+  {
+    "name": "Kantoorboekhandel Laan",
+    "product_url": "https://libris.nl/laan/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1901 EP",
+    "city": "Castricum"
+  },
+  {
+    "name": "Boekhandel Tomey",
+    "product_url": "https://libris.nl/boekhandeltomey/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4101 BX",
+    "city": "Culemborg"
+  },
+  {
+    "name": "Kantoor & Boekhandel KEES (Mereveldplein)",
+    "product_url": "https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3454 CK",
+    "city": "De Meern"
+  },
+  {
+    "name": "MultiMedia Shop",
+    "product_url": "https://libris.nl/multimedia-shop/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7701 GL",
+    "city": "Dedemsvaart"
+  },
+  {
+    "name": "Boekhandel Kempers",
+    "product_url": "https://libris.nl/boekhandelkempers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2624 ET",
+    "city": "Delft"
+  },
+  {
+    "name": "Adr. Heinen",
+    "product_url": "https://www.heinen.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5211 KD",
+    "city": "Den Bosch"
+  },
+  {
+    "name": "Couvée-Benoordenhaeghe Boek & Kantoor",
+    "product_url": "https://libris.nl/boekhandel-denhaag/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2596 ES",
+    "city": "Den Haag"
+  },
+  {
+    "name": "De Vries Van Stockum (Den Haag)",
+    "product_url": "https://libris.nl/devriesvanstockum-boeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2511 BS",
+    "city": "Den Haag"
+  },
+  {
+    "name": "Relay Den Haag",
+    "product_url": "https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2592 AA",
+    "city": "Den Haag"
+  },
+  {
+    "name": "Boekhandel Praamstra",
+    "product_url": "https://libris.nl/boekhandelpraamstra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7411 KG",
+    "city": "Deventer"
+  },
+  {
+    "name": "Boekhandel Didam",
+    "product_url": "https://libris.nl/boekhandeldidam/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6942 BD",
+    "city": "Didam"
+  },
+  {
+    "name": "Boek en Buro Nieuwenhuis",
+    "product_url": "https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6981 CN",
+    "city": "Doesburg"
+  },
+  {
+    "name": "Raadgeep & Berrevoets",
+    "product_url": "https://libris.nl/raadgeepenberrevoets/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7001 AH",
+    "city": "Doetinchem"
+  },
+  {
+    "name": "Van der Velde Boeken Dokkum",
+    "product_url": "https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9101 KH",
+    "city": "Dokkum"
+  },
+  {
+    "name": "Boekhandel All you can give",
+    "product_url": "https://libris.nl/allyoucangive/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6865 GC",
+    "city": "Doorwerth"
+  },
+  {
+    "name": "Vos & Van der Leer (Van Eesterenplein)",
+    "product_url": "https://libris.nl/vos-vanderleer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3315 KV",
+    "city": "Dordrecht"
+  },
+  {
+    "name": "Vos & Van der Leer (Visstraat)",
+    "product_url": "https://libris.nl/vos-vanderleer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3311 KX",
+    "city": "Dordrecht"
+  },
+  {
+    "name": "Van der Velde Boeken Drachten",
+    "product_url": "https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9203 CZ",
+    "city": "Drachten"
+  },
+  {
+    "name": "Boekhandel Jacques Baas",
+    "product_url": "https://libris.nl/boekhandeljacquesbaas/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3971 GN",
+    "city": "Driebergen-Rijsenburg"
+  },
+  {
+    "name": "Boek- en Kantoorvakhandel Sikkers",
+    "product_url": "https://libris.nl/sikkers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5151 BP",
+    "city": "Drunen"
+  },
+  {
+    "name": "Boekwinkel 't Pakhuys",
+    "product_url": "https://libris.nl/pakhuysboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1135 AP",
+    "city": "Edam"
+  },
+  {
+    "name": "Boek en Buro Ede",
+    "product_url": "https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6711 AM",
+    "city": "Ede"
+  },
+  {
+    "name": "Boekhandel Hendriks",
+    "product_url": "https://libris.nl/boekhandelhendriks/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6961 CW",
+    "city": "Eerbeek"
+  },
+  {
+    "name": "Boekhandel Dekker & Dekker",
+    "product_url": "https://libris.nl/boekhandeldekker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1931 AK",
+    "city": "Egmond aan Zee"
+  },
+  {
+    "name": "Boekhandel Gellekink",
+    "product_url": "https://libris.nl/gellekink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7151 AG",
+    "city": "Eibergen"
+  },
+  {
+    "name": "Boekhandel Van Grinsven (Eindhoven)",
+    "product_url": "https://libris.nl/vangrinsven/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5643 AS",
+    "city": "Eindhoven"
+  },
+  {
+    "name": "Boekhandel Van Piere",
+    "product_url": "https://www.vanpiere.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5611 AM",
+    "city": "Eindhoven"
+  },
+  {
+    "name": "Relay Eindhoven Airport",
+    "product_url": "https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5657 EA",
+    "city": "Eindhoven"
+  },
+  {
+    "name": "Elburger Boekhandel",
+    "product_url": "https://libris.nl/elburgerboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8081 ER",
+    "city": "Elburg"
+  },
+  {
+    "name": "Boekhandel Vermeer",
+    "product_url": "https://libris.nl/boekhandelvermeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7811 AL",
+    "city": "Emmen"
+  },
+  {
+    "name": "Boekwinkel De Grote Beer",
+    "product_url": "https://libris.nl/boekwinkeldegrotebeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8801 LV",
+    "city": "Franeker"
+  },
+  {
+    "name": "Boekhandel Van Grinsven (Geldrop)",
+    "product_url": "https://libris.nl/vangrinsven/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5664 HE",
+    "city": "Geldrop"
+  },
+  {
+    "name": "Paard van Troje Gent",
+    "product_url": "https://libris.nl/gent-paardvantroje/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9000",
+    "city": "Gent"
+  },
+  {
+    "name": "Miek-Kado Boek-Kadoshop",
+    "product_url": "https://libris.nl/miek-kado/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3381 AH",
+    "city": "Giessenburg"
+  },
+  {
+    "name": "De Koperen Tuin",
+    "product_url": "https://libris.nl/koperentuin/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4461 KA",
+    "city": "Goes"
+  },
+  {
+    "name": "Het Paard van Troje",
+    "product_url": "https://libris.nl/paardvantroje/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4461 JP",
+    "city": "Goes"
+  },
+  {
+    "name": "Blz. Boekhandel Buitelaar",
+    "product_url": "https://libris.nl/buitelaar/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5051 NP",
+    "city": "Goirle"
+  },
+  {
+    "name": "Boekhandel Struik",
+    "product_url": "https://libris.nl/boekhandelstruik/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7471 BL",
+    "city": "Goor"
+  },
+  {
+    "name": "De Boekenkist",
+    "product_url": "https://libris.nl/de-boekenkist/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4201 KA",
+    "city": "Gorinchem"
+  },
+  {
+    "name": "Planteyn Boeken",
+    "product_url": "https://libris.nl/planteyn/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8401 DE",
+    "city": "Gorredijk"
+  },
+  {
+    "name": "Primera Boekhandel Beren",
+    "product_url": "https://libris.nl/boekhandel-beren/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9714 DW",
+    "city": "Groningen"
+  },
+  {
+    "name": "Primera Boekhandel Paddepoel",
+    "product_url": "https://libris.nl/boekhandelpaddepoel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9742 AK",
+    "city": "Groningen"
+  },
+  {
+    "name": "Van der Velde Boeken Groningen A-kerkhof",
+    "product_url": "https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9712 BC",
+    "city": "Groningen"
+  },
+  {
+    "name": "Van der Velde Boeken Groningen Grote Markt",
+    "product_url": "https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9712 HV",
+    "city": "Groningen"
+  },
+  {
+    "name": "Primera Boekhandel Grootegast",
+    "product_url": "https://libris.nl/boekhandelgrootegast/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9861 AK",
+    "city": "Grootegast"
+  },
+  {
+    "name": "Boek en Buro Haaksbergen",
+    "product_url": "https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7481 HX",
+    "city": "Haaksbergen"
+  },
+  {
+    "name": "De Vries Van Stockum (Haarlem)",
+    "product_url": "https://libris.nl/devriesvanstockum-boeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2011 GK",
+    "city": "Haarlem"
+  },
+  {
+    "name": "Kennemer Boekhandel",
+    "product_url": "https://libris.nl/kennemerboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2023 CA",
+    "city": "Haarlem"
+  },
+  {
+    "name": "Boekhandel Heijink",
+    "product_url": "https://libris.nl/boekhandelheijink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7772 AE",
+    "city": "Hardenberg"
+  },
+  {
+    "name": "Boomker Boeken",
+    "product_url": "https://libris.nl/boomker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9751 AM",
+    "city": "Haren"
+  },
+  {
+    "name": "Van der Velde Boeken Harlingen",
+    "product_url": "https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8861 BM",
+    "city": "Harlingen"
+  },
+  {
+    "name": "Boekhandel Blokker",
+    "product_url": "https://libris.nl/blokker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2101 JP",
+    "city": "Heemstede"
+  },
+  {
+    "name": "Boekhandel Binnert Overdiep",
+    "product_url": "https://www.binnertoverdiep.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8442 BS",
+    "city": "Heerenveen"
+  },
+  {
+    "name": "Boekhandel Dominicanen Heerlen",
+    "product_url": "https://www.boekhandeldominicanen.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6411 JK",
+    "city": "Heerlen"
+  },
+  {
+    "name": "Boekhandel Heesch",
+    "product_url": "https://libris.nl/boekhandelheesch/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5384 AN",
+    "city": "Heesch"
+  },
+  {
+    "name": "Boek en Kantoor De Ganzenveer",
+    "product_url": "https://libris.nl/ganzenveer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5701 PZ",
+    "city": "Helmond"
+  },
+  {
+    "name": "Kantoorboekhandel Peter Swaanen",
+    "product_url": "https://libris.nl/peterswaanen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5081 CL",
+    "city": "Hilvarenbeek"
+  },
+  {
+    "name": "Boekhandel Voorhoeve",
+    "product_url": "https://libris.nl/voorhoeve/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1211 CR",
+    "city": "Hilversum"
+  },
+  {
+    "name": "Boekhandel Hoevelaken",
+    "product_url": "https://libris.nl/boekhandelhoevelaken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3871 AM",
+    "city": "Hoevelaken"
+  },
+  {
+    "name": "Boekhandel Stevens",
+    "product_url": "https://libris.nl/stevens/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2132 CM",
+    "city": "Hoofddorp"
+  },
+  {
+    "name": "Pet Boekverkopers",
+    "product_url": "https://libris.nl/pet-boekverkopers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7901 JV",
+    "city": "Hoogeveen"
+  },
+  {
+    "name": "Boekhandel Stumpel Hoorn (Grote Noord)",
+    "product_url": "https://www.stumpel.nl/zanger-ronald-zingt-de-blues-9789048853366",
+    "postal_code": "1621 KG",
+    "city": "Hoorn"
+  },
+  {
+    "name": "Boekhandel Stumpel Hoorn (Huesmolen)",
+    "product_url": "https://www.stumpel.nl/zanger-ronald-zingt-de-blues-9789048853366",
+    "postal_code": "1625 HZ",
+    "city": "Hoorn"
+  },
+  {
+    "name": "Boekhandel Flevo",
+    "product_url": "https://libris.nl/flevo/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1271 RR",
+    "city": "Huizen"
+  },
+  {
+    "name": "Boekhandel Remortel - Hulst",
+    "product_url": "https://libris.nl/remortel-hulst/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4561 EJ",
+    "city": "Hulst"
+  },
+  {
+    "name": "Boekhandel Holtrop",
+    "product_url": "https://libris.nl/boekhandelholtrop/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8501 AS",
+    "city": "Joure"
+  },
+  {
+    "name": "Boekhandel Lectori",
+    "product_url": "https://libris.nl/lectori/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4421 AC",
+    "city": "Kapelle"
+  },
+  {
+    "name": "Afhaalpunt Katwijk (enkel vooraf betaalde bestellingen afhalen) Brownies & Downies",
+    "product_url": "https://libris.nl/vandermeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2225 CS",
+    "city": "Katwijk aan Zee"
+  },
+  {
+    "name": "Boekhandel Deurenberg",
+    "product_url": "https://libris.nl/boekhandeldeurenberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6461 AS",
+    "city": "Kerkrade"
+  },
+  {
+    "name": "Boekwinkel Omlo",
+    "product_url": "https://libris.nl/boekwinkelomlo/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7891 GG",
+    "city": "Klazienaveen"
+  },
+  {
+    "name": "Boekhandel CW 76",
+    "product_url": "https://libris.nl/boekhandelcw76/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1241 CP",
+    "city": "Kortenhoef"
+  },
+  {
+    "name": "Boekhandel Crimpenhof",
+    "product_url": "https://libris.nl/boekhandelcrimpenhof/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2922 AJ",
+    "city": "Krimpen aan den IJssel"
+  },
+  {
+    "name": "Boekhandel Stumpel Krommenie",
+    "product_url": "https://www.stumpel.nl/zanger-ronald-zingt-de-blues-9789048853366",
+    "postal_code": "1561 AP",
+    "city": "Krommenie"
+  },
+  {
+    "name": "Larense Boekhandel",
+    "product_url": "https://libris.nl/larenseboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1251 AW",
+    "city": "Laren"
+  },
+  {
+    "name": "Van der Velde Boeken Leeuwarden",
+    "product_url": "https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8911 CJ",
+    "city": "Leeuwarden"
+  },
+  {
+    "name": "Boekhandel Kooyker",
+    "product_url": "https://libris.nl/kooyker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2311 CK",
+    "city": "Leiden"
+  },
+  {
+    "name": "Primera Kopermolen",
+    "product_url": "https://libris.nl/kopermolen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2317 PA",
+    "city": "Leiden"
+  },
+  {
+    "name": "Primera Boekhandel Lemmer",
+    "product_url": "https://libris.nl/boekhandel-lemmer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8531 EA",
+    "city": "Lemmer"
+  },
+  {
+    "name": "Boekhandel Rosetta",
+    "product_url": "https://libris.nl/boekhandelrosetta/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3831 NC",
+    "city": "Leusden"
+  },
+  {
+    "name": "Kantoorboekhandel Meneer Kees",
+    "product_url": "https://libris.nl/meneerkees/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7131 DH",
+    "city": "Lichtenvoorde"
+  },
+  {
+    "name": "Boekhandel Lovink",
+    "product_url": "https://libris.nl/lovink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7241 AA",
+    "city": "Lochem"
+  },
+  {
+    "name": "Boekhandel Sprankenis",
+    "product_url": "https://libris.nl/sprankenis/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6026 CP",
+    "city": "Maarheeze"
+  },
+  {
+    "name": "Boek & Koek",
+    "product_url": "https://libris.nl/boekenkoek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3951 CH",
+    "city": "Maarn"
+  },
+  {
+    "name": "Boekhandel Dominicanen",
+    "product_url": "https://www.boekhandeldominicanen.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6211 CZ",
+    "city": "Maastricht"
+  },
+  {
+    "name": "Boek- en Kantoorvakhandel Prins",
+    "product_url": "https://libris.nl/prins/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7475 AX",
+    "city": "Markelo"
+  },
+  {
+    "name": "Boekhandel Stumpel Medemblik",
+    "product_url": "https://www.stumpel.nl/zanger-ronald-zingt-de-blues-9789048853366",
+    "postal_code": "1671 BG",
+    "city": "Medemblik"
+  },
+  {
+    "name": "De Drvkkery",
+    "product_url": "https://drukkerijmiddelburg.nl/zanger-ronald-zingt-de-blues-9789048853366",
+    "postal_code": "4331 LK",
+    "city": "Middelburg"
+  },
+  {
+    "name": "Boek - en kantoorvakhandel Dekker - Van Esbroek",
+    "product_url": "https://libris.nl/dekker-vanesbroek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3241 GA",
+    "city": "Middelharnis"
+  },
+  {
+    "name": "Nimo Boek",
+    "product_url": "https://libris.nl/nimoboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1141 BG",
+    "city": "Monnickendam"
+  },
+  {
+    "name": "Boekhandel Roodbeen",
+    "product_url": "https://libris.nl/roodbeen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3861 AB",
+    "city": "Nijkerk"
+  },
+  {
+    "name": "Dekker v.d. Vegt Boekverkopers",
+    "product_url": "https://www.libris.nl/dekker-vd-vegt/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6511 PX",
+    "city": "Nijmegen"
+  },
+  {
+    "name": "Kantoorboekhandel Jacobs",
+    "product_url": "https://libris.nl/jacobs/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6531 HE",
+    "city": "Nijmegen"
+  },
+  {
+    "name": "Boekhandel Spithoff",
+    "product_url": "https://libris.nl/boekhandelspithoff/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7442 NJ",
+    "city": "Nijverdal"
+  },
+  {
+    "name": "Boekhandel Van der Meer",
+    "product_url": "https://libris.nl/vandermeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2201 MB",
+    "city": "Noordwijk"
+  },
+  {
+    "name": "Westerhof Nunspeet",
+    "product_url": "https://libris.nl/westerhofboeken-jufferenwal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8071 BZ",
+    "city": "Nunspeet"
+  },
+  {
+    "name": "Rijnlandse Boekhandel",
+    "product_url": "https://libris.nl/rijnlandseboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2343 CB",
+    "city": "Oegstgeest"
+  },
+  {
+    "name": "Boekhandel Oisterwijk",
+    "product_url": "https://libris.nl/boekhandeloisterwijk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5061 EJ",
+    "city": "Oisterwijk"
+  },
+  {
+    "name": "Primera Korten Olst",
+    "product_url": "https://libris.nl/korten/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8121 BK",
+    "city": "Olst"
+  },
+  {
+    "name": "Boekhandel Meijer & Siegers",
+    "product_url": "https://libris.nl/meijerensiegers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6862 AX",
+    "city": "Oosterbeek"
+  },
+  {
+    "name": "Het Verboden Rijk",
+    "product_url": "https://libris.nl/hetverbodenrijk-oosterhout/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4901 JK",
+    "city": "Oosterhout"
+  },
+  {
+    "name": "Boekhandel Derijks",
+    "product_url": "https://libris.nl/derijks/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5341 CK",
+    "city": "Oss"
+  },
+  {
+    "name": "Boekhandel Sprey",
+    "product_url": "https://libris.nl/boekhandelsprey/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1191 BG",
+    "city": "Ouderkerk aan de Amstel"
+  },
+  {
+    "name": "Primera Panningen",
+    "product_url": "https://libris.nl/boekhandel-panningen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5981 AP",
+    "city": "Panningen"
+  },
+  {
+    "name": "Kantoorboekhandel Van Atten (Pijnacker)",
+    "product_url": "https://libris.nl/vanattenboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2641 EN",
+    "city": "Pijnacker"
+  },
+  {
+    "name": "Boekhandel Stumpel Purmerend",
+    "product_url": "https://www.stumpel.nl/zanger-ronald-zingt-de-blues-9789048853366",
+    "postal_code": "1441 BB",
+    "city": "Purmerend"
+  },
+  {
+    "name": "Het Leesteken",
+    "product_url": "https://libris.nl/leesteken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1441 BD",
+    "city": "Purmerend"
+  },
+  {
+    "name": "Bij Arie Lees | schrijf | kadoshop",
+    "product_url": "https://libris.nl/bij-arie/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3297 BM",
+    "city": "Puttershoek"
+  },
+  {
+    "name": "Boekhandel De Ridderhof",
+    "product_url": "https://libris.nl/deridderhof/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2981 ET",
+    "city": "Ridderkerk"
+  },
+  {
+    "name": "Boekhandel Daan Nijman",
+    "product_url": "https://www.daannijman.nl/boek/zanger-ronald-zingt-de-blues-9789048853366/",
+    "postal_code": "9301 AE",
+    "city": "Roden"
+  },
+  {
+    "name": "Veenerick Boek en Kantoor",
+    "product_url": "https://libris.nl/veenerick/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2371 DA",
+    "city": "Roelofarendsveen"
+  },
+  {
+    "name": "De Boekenwurm (Afhaalpunt Boekhandel Quist)",
+    "product_url": "https://libris.nl/quistboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4701 JP",
+    "city": "Roosendaal"
+  },
+  {
+    "name": "Kantoorboekhandel Kortendijk",
+    "product_url": "https://libris.nl/kortendijk-tolberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4706 LA",
+    "city": "Roosendaal"
+  },
+  {
+    "name": "Kantoorboekhandel Tolberg",
+    "product_url": "https://libris.nl/kortendijk-tolberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4708 HK",
+    "city": "Roosendaal"
+  },
+  {
+    "name": "Boekhandel De Omslag",
+    "product_url": "https://libris.nl/deomslag/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5241 TJ",
+    "city": "Rosmalen"
+  },
+  {
+    "name": "Boekhandel Donner",
+    "product_url": "https://www.donner.nl/producten/zanger-ronald-zingt-de-blues-9789048853366/",
+    "postal_code": "3012 AG",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Boekhandel Maximus",
+    "product_url": "https://libris.nl/maximushillegersberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3054 GG",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Relay Rotterdam Centraal Hal",
+    "product_url": "https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3013 AJ",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Relay Rotterdam Centraal Passage",
+    "product_url": "https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3013 AJ",
+    "city": "Rotterdam"
+  },
+  {
+    "name": "Bredero Boeken",
+    "product_url": "https://libris.nl/bredero/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2071 EP",
+    "city": "Santpoort-Noord"
+  },
+  {
+    "name": "Boekhandel Plukker",
+    "product_url": "https://libris.nl/boekhandelplukker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1741 GB",
+    "city": "Schagen"
+  },
+  {
+    "name": "De Spijker Boek en Gemak",
+    "product_url": "https://libris.nl/despijkerboekengemak/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5374 AC",
+    "city": "Schaijk"
+  },
+  {
+    "name": "Primera Boekhandel Scherpenzeel",
+    "product_url": "https://libris.nl/boekhandel-scherpenzeel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3925 KC",
+    "city": "Scherpenzeel"
+  },
+  {
+    "name": "Post Scriptum",
+    "product_url": "https://libris.nl/postscriptum/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3121 CA",
+    "city": "Schiedam"
+  },
+  {
+    "name": "Boekhandel Simpelveld",
+    "product_url": "https://libris.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6369 AW",
+    "city": "Simpelveld"
+  },
+  {
+    "name": "La Livy Boek & Cadeau",
+    "product_url": "https://libris.nl/lalivy/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5271 AW",
+    "city": "Sint-Michielgestel"
+  },
+  {
+    "name": "Boekhandel Sint-Oedenrode",
+    "product_url": "https://libris.nl/boekhandelsintoedenrode/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5492 AT",
+    "city": "Sint-Oedenrode"
+  },
+  {
+    "name": "PeZZi PaZZi",
+    "product_url": "https://www.pezzipazzi.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1381 BA",
+    "city": "WEESP"
+  },
+  {
+    "name": "Boekhandel Remortel - Sluis",
+    "product_url": "https://libris.nl/remortel-sluis/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4524 EC",
+    "city": "Sluis"
+  },
+  {
+    "name": "Van der Velde Boeken Sneek",
+    "product_url": "https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8601 CM",
+    "city": "Sneek"
+  },
+  {
+    "name": "Boekhandel Van de Ven",
+    "product_url": "https://libris.nl/vandeven/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3768 EJ",
+    "city": "Soest"
+  },
+  {
+    "name": "Boekhandel Someren",
+    "product_url": "https://libris.nl/boekhandelsomeren/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5711 EN",
+    "city": "Someren"
+  },
+  {
+    "name": "De Traverse",
+    "product_url": "https://libris.nl/detraverse/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5691 AD",
+    "city": "Son en Breugel"
+  },
+  {
+    "name": "Firma P.A. Vermeulen",
+    "product_url": "https://libris.nl/vermeulenboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4651 BL",
+    "city": "Steenbergen"
+  },
+  {
+    "name": "Primera Blz. Steenwijk's Boekhuys",
+    "product_url": "https://libris.nl/steenwijk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8331 HD",
+    "city": "Steenwijk"
+  },
+  {
+    "name": "Boekhandel Schouten",
+    "product_url": "https://libris.nl/boekhandelschouten/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3291 AJ",
+    "city": "Strijen"
+  },
+  {
+    "name": "De Gemaksshop Tegelen",
+    "product_url": "https://libris.nl/gemaksshoptegelen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5931 NM",
+    "city": "Tegelen"
+  },
+  {
+    "name": "Boekhandel Van de Sande",
+    "product_url": "https://libris.nl/vandesande/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4531 GC",
+    "city": "Terneuzen"
+  },
+  {
+    "name": "Nauta Boek",
+    "product_url": "https://libris.nl/nautaboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1791 CB",
+    "city": "Texel (Den Burg)"
+  },
+  {
+    "name": "Boekhandel Arentsen en Tomey",
+    "product_url": "https://libris.nl/arentsen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4001 LS",
+    "city": "Tiel"
+  },
+  {
+    "name": "Gianotten Mutsaers",
+    "product_url": "https://libris.nl/gianotten-mutsaers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5038 XA",
+    "city": "Tilburg"
+  },
+  {
+    "name": "Boek- en Kantoorboekhandel Oonk",
+    "product_url": "https://libris.nl/oonk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7391 EK",
+    "city": "Twello"
+  },
+  {
+    "name": "Primera BLZ Westra Ugchelen",
+    "product_url": "https://libris.nl/boekhandel-westra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7339 CK",
+    "city": "Ugchelen"
+  },
+  {
+    "name": "Boek- en Kantoorboekhandel Schuyt",
+    "product_url": "https://libris.nl/schuyt/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1911 ED",
+    "city": "Uitgeest"
+  },
+  {
+    "name": "Boekhandel Ulft",
+    "product_url": "https://libris.nl/boekhandel-ulft/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7071 WT",
+    "city": "Ulft"
+  },
+  {
+    "name": "BROESE",
+    "product_url": "https://www.broese.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3511 AW",
+    "city": "Utrecht"
+  },
+  {
+    "name": "Kantoor & Boekhandel KEES (Ella Fitzgeraldplein)",
+    "product_url": "https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3543 EP",
+    "city": "Utrecht"
+  },
+  {
+    "name": "Boekhandel Rutgers",
+    "product_url": "https://libris.nl/rutgers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7051 CJ",
+    "city": "Varsseveld"
+  },
+  {
+    "name": "Primera Boekhandel Hiemstra",
+    "product_url": "https://libris.nl/boekhandel-hiemstra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9641 DB",
+    "city": "Veendam"
+  },
+  {
+    "name": "Boekhandel Van Kooten",
+    "product_url": "https://libris.nl/vankooten/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3905 EB",
+    "city": "Veenendaal"
+  },
+  {
+    "name": "Boek- en Kantoorboekhandel Schellen",
+    "product_url": "https://libris.nl/schellen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5461 KE",
+    "city": "Veghel"
+  },
+  {
+    "name": "Boekhandel Jansen & de Feijter",
+    "product_url": "https://libris.nl/jansen-defeijter/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6881 ST",
+    "city": "Velp"
+  },
+  {
+    "name": "Boekhandel Koops",
+    "product_url": "https://www.boekhandelkoops.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5911 BZ",
+    "city": "Venlo"
+  },
+  {
+    "name": "Boekhandel Roojboek",
+    "product_url": "https://libris.nl/roojboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "5801 BV",
+    "city": "Venray"
+  },
+  {
+    "name": "Kantoor & Boekhandel KEES (Middenburcht)",
+    "product_url": "https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3452 MS",
+    "city": "Vleuten"
+  },
+  {
+    "name": "Boekhandel 't Spui",
+    "product_url": "https://libris.nl/boekhandel-spui/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4381 ER",
+    "city": "Vlissingen"
+  },
+  {
+    "name": "Boekhandel Jan Cas Sombroek",
+    "product_url": "https://libris.nl/jancas-sombroek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1131 BS",
+    "city": "Volendam"
+  },
+  {
+    "name": "Borker Boekwinkel",
+    "product_url": "https://libris.nl/borkerboekwinkel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9431 AC",
+    "city": "Westerbork"
+  },
+  {
+    "name": "Boekhandel Reterink",
+    "product_url": "https://libris.nl/reterink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7641 BV",
+    "city": "Wierden"
+  },
+  {
+    "name": "Primera Boekhandel Wieringerwerf",
+    "product_url": "https://libris.nl/primeraboekhandelwieringerwerf/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "1771 AC",
+    "city": "Wieringerwerf"
+  },
+  {
+    "name": "Boekhandel Kramer",
+    "product_url": " Winterswijk",
+    "postal_code": "https://libris.nl/boekhandelkramer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "city": "7101 NR"
+  },
+  {
+    "name": "Kantoor & Boekhandel KEES (Fontaineplein)",
+    "product_url": "https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3446 BX",
+    "city": "Woerden"
+  },
+  {
+    "name": "Boekhuis Stumpel (Workum)",
+    "product_url": "https://www.stumpel.nl/zanger-ronald-zingt-de-blues-9789048853366",
+    "postal_code": "8711 AA",
+    "city": "Workum"
+  },
+  {
+    "name": "Kramer & van Doorn",
+    "product_url": "https://libris.nl/kramer-vandoorn/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3701 GE",
+    "city": "Zeist"
+  },
+  {
+    "name": "Boek en Buro Rebers",
+    "product_url": "https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "6901 AK",
+    "city": "Zevenaar"
+  },
+  {
+    "name": "Boekhandel De Vries",
+    "product_url": "https://libris.nl/devries/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "4301 CB",
+    "city": "Zierikzee"
+  },
+  {
+    "name": "Boekhandel D. Sonneveld (Winkelcentrum Meerzicht)",
+    "product_url": "https://libris.nl/sonneveld/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2716 CW",
+    "city": "Zoetermeer"
+  },
+  {
+    "name": "Boekhandel D. Sonneveld (Winkelcentrum Oosterheem)",
+    "product_url": "https://libris.nl/sonneveld/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "2721 NJ",
+    "city": "Zoetermeer"
+  },
+  {
+    "name": "Boekhandel Schoelier",
+    "product_url": "https://libris.nl/schoelier/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "9801 BX",
+    "city": "Zuidhorn"
+  },
+  {
+    "name": "Boek en Buro Van den Brink",
+    "product_url": "https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7201 LC",
+    "city": "Zutphen"
+  },
+  {
+    "name": "Van Someren & Ten Bosch Zutphen",
+    "product_url": "https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "7201 KE",
+    "city": "Zutphen"
+  },
+  {
+    "name": "Vos & Van der Leer (Walburg)",
+    "product_url": "https://libris.nl/vos-vanderleer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "3332 EH",
+    "city": "Zwijndrecht"
+  },
+  {
+    "name": "Boekhandel Westerhof (Diezerstraat)",
+    "product_url": "https://libris.nl/westerhofboeken-jufferenwal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8011 RL",
+    "city": "Zwolle"
+  },
+  {
+    "name": "Boekhandel Westerhof (Wade)",
+    "product_url": "https://libris.nl/westerhofboeken-jufferenwal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8043 LS",
+    "city": "Zwolle"
+  },
+  {
+    "name": "Van der Velde Boeken Zwolle",
+    "product_url": "https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390",
+    "postal_code": "8011 VA",
+    "city": "Zwolle"
+  }
+]

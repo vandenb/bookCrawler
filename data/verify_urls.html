@@ -1,0 +1,2928 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boekhandel URL Verificatie - Zanger Ronald zingt de blues</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+        }
+        .info {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .store {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .store-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #1976d2;
+        }
+        .store-location {
+            color: #666;
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        .store-link {
+            word-break: break-all;
+        }
+        .store-link a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+        .store-link a:hover {
+            text-decoration: underline;
+        }
+        .store-link a:visited {
+            color: #7b1fa2;
+        }
+        .checkbox {
+            margin-top: 8px;
+        }
+        .checkbox label {
+            cursor: pointer;
+            user-select: none;
+        }
+        .stats {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Boekhandel URL Verificatie</h1>
+    <div class="info">
+        <strong>Boek:</strong> Zanger Ronald zingt de blues - Walter van den Berg<br>
+        <strong>ISBN:</strong> 9789048853366<br>
+        <strong>Aantal boekhandels:</strong> 236<br><br>
+        <em>Klik op elke link om te controleren of de pagina werkt. Vink af als de URL correct is.</em>
+    </div>
+
+    <div class="stats" id="stats">
+        Gecontroleerd: <span id="checked-count">0</span> / 236
+    </div>
+
+    <div id="stores">
+        <div class="store">
+            <div class="store-name">Boekhandel Stumpel Alkmaar</div>
+            <div class="store-location">1811 JG Alkmaar</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van der Meulen's Boekhandel</div>
+            <div class="store-location">1811 JD Alkmaar</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vandermeulen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vandermeulen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Stumpel Almere</div>
+            <div class="store-location">1315 VH Almere</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Van den Brink</div>
+            <div class="store-location">9163 GZ Ameland</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vandenbrink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vandenbrink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Veenendaal</div>
+            <div class="store-location">3811 AB Amersfoort</div>
+            <div class="store-link">
+                <a href="https://libris.nl/veenendaal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/veenendaal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Algemene Boekhandel</div>
+            <div class="store-location">3817 KE Amersfoort</div>
+            <div class="store-link">
+                <a href="https://libris.nl/dealgemeneboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/dealgemeneboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Libris Venstra</div>
+            <div class="store-location">1181 ZM Amstelveen</div>
+            <div class="store-link">
+                <a href="https://www.venstra.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.venstra.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Twister</div>
+            <div class="store-location">1187 LV Amstelveen</div>
+            <div class="store-link">
+                <a href="https://www.detwister.com/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.detwister.com/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Athenaeum Boekhandel & Nieuwscentrum</div>
+            <div class="store-location">1012 XA Amsterdam</div>
+            <div class="store-link">
+                <a href="https://athenaeumscheltema.nl/athenaeum/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://athenaeumscheltema.nl/athenaeum/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Athenaeum Boekhandel Zuidoost</div>
+            <div class="store-location">1102 ML Amsterdam</div>
+            <div class="store-link">
+                <a href="https://athenaeumscheltema.nl/zuidoost/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://athenaeumscheltema.nl/zuidoost/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel het Martyrium</div>
+            <div class="store-location">1071 BH Amsterdam</div>
+            <div class="store-link">
+                <a href="https://athenaeumscheltema.nl/martyrium/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://athenaeumscheltema.nl/martyrium/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Hoogstins</div>
+            <div class="store-location">1053 DL Amsterdam</div>
+            <div class="store-link">
+                <a href="https://www.hoogstins.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.hoogstins.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Jimmink</div>
+            <div class="store-location">1078 NL Amsterdam</div>
+            <div class="store-link">
+                <a href="https://boekhandeljimmink.shop/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://boekhandeljimmink.shop/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Mulder</div>
+            <div class="store-location">1071 JH Amsterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-mulder/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-mulder/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Scheltema</div>
+            <div class="store-location">1012 KK Amsterdam</div>
+            <div class="store-link">
+                <a href="https://athenaeumscheltema.nl/scheltema/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://athenaeumscheltema.nl/scheltema/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel van Noord</div>
+            <div class="store-location">1025 EW Amsterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelvannoord/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelvannoord/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Van Rossum</div>
+            <div class="store-location">1077 JH Amsterdam</div>
+            <div class="store-link">
+                <a href="https://athenaeumscheltema.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://athenaeumscheltema.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekholt A la Carte</div>
+            <div class="store-location">1011 HB Amsterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Amsterdamse Boekhandel</div>
+            <div class="store-location">1081 AC Amsterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/de-amsterdamse-boekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/de-amsterdamse-boekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Dolfijn</div>
+            <div class="store-location">1013 JG Amsterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">IJBURG BOEKEN</div>
+            <div class="store-location">1087 BS Amsterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/ijburgboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/ijburgboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Island Boekholt</div>
+            <div class="store-location">1015 LT Amsterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Pantheon Boekholt</div>
+            <div class="store-location">1011 HB Amsterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekholtboekhandels/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Relay Amsterdam CS IJ-passage</div>
+            <div class="store-location">1012 AB Amsterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Relay Amsterdam CS Middentunnel</div>
+            <div class="store-location">1012 AB Amsterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">VU Boekhandel</div>
+            <div class="store-location">1081 HV Amsterdam</div>
+            <div class="store-link">
+                <a href="https://www.vuboekhandel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vuboekhandel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Stad Leest</div>
+            <div class="store-location">2000 Antwerpen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/antwerpen-stadleest/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/antwerpen-stadleest/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Nawijn & Polak</div>
+            <div class="store-location">7311 LR Apeldoorn</div>
+            <div class="store-link">
+                <a href="https://libris.nl/nawijn-polak/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/nawijn-polak/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera BLZ Westra Kerschoten</div>
+            <div class="store-location">7316 HL Apeldoorn</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-westra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-westra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera BLZ Westra Orden</div>
+            <div class="store-location">7312 NL Apeldoorn</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-westra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-westra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Arnhem - Het Colofon</div>
+            <div class="store-location">6811 EJ Arnhem</div>
+            <div class="store-link">
+                <a href="https://www.hetcolofon.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.hetcolofon.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van der Velde Boeken Assen</div>
+            <div class="store-location">9401 JL Assen</div>
+            <div class="store-link">
+                <a href="https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Boekhandel Avenhorn</div>
+            <div class="store-location">1633 DT Avenhorn</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-avenhorn/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-avenhorn/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Den Boer</div>
+            <div class="store-location">3743 BC Baarn</div>
+            <div class="store-link">
+                <a href="https://libris.nl/denboer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/denboer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Jaspers</div>
+            <div class="store-location">1171 CH Badhoevedorp</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandeljaspers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandeljaspers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera boekhandel De Gele Klap</div>
+            <div class="store-location">9781 AA Bedum</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-de-gele-klap/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-de-gele-klap/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van den Heuvel Boek en Kantoor</div>
+            <div class="store-location">5741 CP Beek en Donk</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vdhboekenkantoor/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vdhboekenkantoor/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Het Logboek</div>
+            <div class="store-location">9411 KL Beilen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/hetlogboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/hetlogboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Thomas</div>
+            <div class="store-location">1861 GA Bergen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/thomas/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/thomas/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Quist</div>
+            <div class="store-location">4611 NP Bergen op Zoom</div>
+            <div class="store-link">
+                <a href="https://libris.nl/quistboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/quistboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoorboekhandel Van Atten (Berkel en Rodenrijs)</div>
+            <div class="store-location">2651 CE Berkel en Rodenrijs</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vanattenboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vanattenboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek- en Kantoorboekhandel Mieke Wijgergangs</div>
+            <div class="store-location">5258 AX Berlicum</div>
+            <div class="store-link">
+                <a href="https://libris.nl/miekewijgergangs/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/miekewijgergangs/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Bilthovense Boekhandel</div>
+            <div class="store-location">3722 AJ Bilthoven</div>
+            <div class="store-link">
+                <a href="https://www.bilthovenseboekhandel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.bilthovenseboekhandel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Blaricumsche Boekhandel</div>
+            <div class="store-location">1261 AW Blaricum</div>
+            <div class="store-link">
+                <a href="https://libris.nl/blaricumscheboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/blaricumscheboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhuis Stumpel (Bolsward)</div>
+            <div class="store-location">8701 KH Bolsward</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Libris Buitelaar Breda</div>
+            <div class="store-location">4811 XL Breda</div>
+            <div class="store-link">
+                <a href="https://libris.nl/librisbuitelaar/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/librisbuitelaar/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Relay Breda</div>
+            <div class="store-location">4811 BN Breda</div>
+            <div class="store-link">
+                <a href="https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van Kemenade & Hollaers (Ginnekenweg)</div>
+            <div class="store-location">4818 JG Breda</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vankemenade-hollaers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vankemenade-hollaers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Breskens</div>
+            <div class="store-location">4511 AP Breskens</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelbreskens/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelbreskens/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek en Kantoor Marinus van Kralingen</div>
+            <div class="store-location">3621 AR Breukelen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vankralingen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vankralingen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Bosman Brummen - Primera XL</div>
+            <div class="store-location">6971 AB Brummen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-xl-brummen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-xl-brummen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van Ravenswaay books & more</div>
+            <div class="store-location">3981 EP Bunnik</div>
+            <div class="store-link">
+                <a href="https://libris.nl/ravenswaay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/ravenswaay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Los</div>
+            <div class="store-location">1404 CM Bussum</div>
+            <div class="store-link">
+                <a href="https://libris.nl/los/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/los/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Derde Druk</div>
+            <div class="store-location">2903 AD Capelle aan den IJssel</div>
+            <div class="store-link">
+                <a href="https://libris.nl/derdedruk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/derdedruk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoorboekhandel Laan</div>
+            <div class="store-location">1901 EP Castricum</div>
+            <div class="store-link">
+                <a href="https://libris.nl/laan/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/laan/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Tomey</div>
+            <div class="store-location">4101 BX Culemborg</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandeltomey/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandeltomey/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoor & Boekhandel KEES (Mereveldplein)</div>
+            <div class="store-location">3454 CK De Meern</div>
+            <div class="store-link">
+                <a href="https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">MultiMedia Shop</div>
+            <div class="store-location">7701 GL Dedemsvaart</div>
+            <div class="store-link">
+                <a href="https://libris.nl/multimedia-shop/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/multimedia-shop/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Kempers</div>
+            <div class="store-location">2624 ET Delft</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelkempers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelkempers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Adr. Heinen</div>
+            <div class="store-location">5211 KD Den Bosch</div>
+            <div class="store-link">
+                <a href="https://www.heinen.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.heinen.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Couvée-Benoordenhaeghe Boek & Kantoor</div>
+            <div class="store-location">2596 ES Den Haag</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-denhaag/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-denhaag/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Vries Van Stockum (Den Haag)</div>
+            <div class="store-location">2511 BS Den Haag</div>
+            <div class="store-link">
+                <a href="https://libris.nl/devriesvanstockum-boeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/devriesvanstockum-boeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Relay Den Haag</div>
+            <div class="store-location">2592 AA Den Haag</div>
+            <div class="store-link">
+                <a href="https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">KopGroep Bibliotheken (afhaalpunt Boekhandel Plukker)</div>
+            <div class="store-location">1781 BB Den Helder</div>
+            <div class="store-link">
+                <a href="https://boekhandelplukker.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://boekhandelplukker.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Praamstra</div>
+            <div class="store-location">7411 KG Deventer</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelpraamstra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelpraamstra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Didam</div>
+            <div class="store-location">6942 BD Didam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandeldidam/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandeldidam/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek en Buro Nieuwenhuis</div>
+            <div class="store-location">6981 CN Doesburg</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Raadgeep & Berrevoets</div>
+            <div class="store-location">7001 AH Doetinchem</div>
+            <div class="store-link">
+                <a href="https://libris.nl/raadgeepenberrevoets/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/raadgeepenberrevoets/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van der Velde Boeken Dokkum</div>
+            <div class="store-location">9101 KH Dokkum</div>
+            <div class="store-link">
+                <a href="https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel All you can give</div>
+            <div class="store-location">6865 GC Doorwerth</div>
+            <div class="store-link">
+                <a href="https://libris.nl/allyoucangive/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/allyoucangive/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Vos & Van der Leer (Van Eesterenplein)</div>
+            <div class="store-location">3315 KV Dordrecht</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vos-vanderleer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vos-vanderleer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Vos & Van der Leer (Visstraat)</div>
+            <div class="store-location">3311 KX Dordrecht</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vos-vanderleer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vos-vanderleer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van der Velde Boeken Drachten</div>
+            <div class="store-location">9203 CZ Drachten</div>
+            <div class="store-link">
+                <a href="https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Jacques Baas</div>
+            <div class="store-location">3971 GN Driebergen-Rijsenburg</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandeljacquesbaas/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandeljacquesbaas/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek- en Kantoorvakhandel Sikkers</div>
+            <div class="store-location">5151 BP Drunen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/sikkers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/sikkers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekwinkel 't Pakhuys</div>
+            <div class="store-location">1135 AP Edam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/pakhuysboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/pakhuysboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek en Buro Ede</div>
+            <div class="store-location">6711 AM Ede</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Hendriks</div>
+            <div class="store-location">6961 CW Eerbeek</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelhendriks/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelhendriks/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Dekker & Dekker</div>
+            <div class="store-location">1931 AK Egmond aan Zee</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandeldekker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandeldekker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Gellekink</div>
+            <div class="store-location">7151 AG Eibergen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/gellekink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/gellekink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Van Grinsven (Eindhoven)</div>
+            <div class="store-location">5643 AS Eindhoven</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vangrinsven/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vangrinsven/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Van Piere</div>
+            <div class="store-location">5611 AM Eindhoven</div>
+            <div class="store-link">
+                <a href="https://www.vanpiere.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanpiere.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Relay Eindhoven Airport</div>
+            <div class="store-location">5657 EA Eindhoven</div>
+            <div class="store-link">
+                <a href="https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Elburger Boekhandel</div>
+            <div class="store-location">8081 ER Elburg</div>
+            <div class="store-link">
+                <a href="https://libris.nl/elburgerboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/elburgerboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Vermeer</div>
+            <div class="store-location">7811 AL Emmen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelvermeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelvermeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Stumpel Enkhuizen</div>
+            <div class="store-location">1601 AM Enkhuizen</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekwinkel De Grote Beer</div>
+            <div class="store-location">8801 LV Franeker</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekwinkeldegrotebeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekwinkeldegrotebeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Van Grinsven (Geldrop)</div>
+            <div class="store-location">5664 HE Geldrop</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vangrinsven/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vangrinsven/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Paard van Troje Gent</div>
+            <div class="store-location">9000 Gent</div>
+            <div class="store-link">
+                <a href="https://libris.nl/gent-paardvantroje/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/gent-paardvantroje/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Miek-Kado Boek-Kadoshop</div>
+            <div class="store-location">3381 AH Giessenburg</div>
+            <div class="store-link">
+                <a href="https://libris.nl/miek-kado/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/miek-kado/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Koperen Tuin</div>
+            <div class="store-location">4461 KA Goes</div>
+            <div class="store-link">
+                <a href="https://libris.nl/koperentuin/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/koperentuin/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Het Paard van Troje</div>
+            <div class="store-location">4461 JP Goes</div>
+            <div class="store-link">
+                <a href="https://libris.nl/paardvantroje/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/paardvantroje/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Blz. Boekhandel Buitelaar</div>
+            <div class="store-location">5051 NP Goirle</div>
+            <div class="store-link">
+                <a href="https://libris.nl/buitelaar/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/buitelaar/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Struik</div>
+            <div class="store-location">7471 BL Goor</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelstruik/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelstruik/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Boekenkist</div>
+            <div class="store-location">4201 KA Gorinchem</div>
+            <div class="store-link">
+                <a href="https://libris.nl/de-boekenkist/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/de-boekenkist/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Planteyn Boeken</div>
+            <div class="store-location">8401 DE Gorredijk</div>
+            <div class="store-link">
+                <a href="https://libris.nl/planteyn/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/planteyn/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoorboekhandel Bechtle</div>
+            <div class="store-location">7213 CX Gorssel</div>
+            <div class="store-link">
+                <a href="https://www.debechtle.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.debechtle.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Paagman Gouda</div>
+            <div class="store-location">2801 KE Gouda</div>
+            <div class="store-link">
+                <a href="https://www.verkaaikboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.verkaaikboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Boekhandel Beren</div>
+            <div class="store-location">9714 DW Groningen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-beren/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-beren/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Boekhandel Paddepoel</div>
+            <div class="store-location">9742 AK Groningen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelpaddepoel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelpaddepoel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van der Velde Boeken Groningen A-kerkhof</div>
+            <div class="store-location">9712 BC Groningen</div>
+            <div class="store-link">
+                <a href="https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van der Velde Boeken Groningen Grote Markt</div>
+            <div class="store-location">9712 HV Groningen</div>
+            <div class="store-link">
+                <a href="https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Boekhandel Grootegast</div>
+            <div class="store-location">9861 AK Grootegast</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelgrootegast/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelgrootegast/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek en Buro Haaksbergen</div>
+            <div class="store-location">7481 HX Haaksbergen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Athenaeum Boekhandel Haarlem</div>
+            <div class="store-location">2011 GT Haarlem</div>
+            <div class="store-link">
+                <a href="https://athenaeumscheltema.nl/haarlem/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://athenaeumscheltema.nl/haarlem/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Vries Van Stockum (Haarlem)</div>
+            <div class="store-location">2011 GK Haarlem</div>
+            <div class="store-link">
+                <a href="https://libris.nl/devriesvanstockum-boeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/devriesvanstockum-boeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kennemer Boekhandel</div>
+            <div class="store-location">2023 CA Haarlem</div>
+            <div class="store-link">
+                <a href="https://libris.nl/kennemerboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/kennemerboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Heijink</div>
+            <div class="store-location">7772 AE Hardenberg</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelheijink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelheijink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boomker Boeken</div>
+            <div class="store-location">9751 AM Haren</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boomker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boomker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van der Velde Boeken Harlingen</div>
+            <div class="store-location">8861 BM Harlingen</div>
+            <div class="store-link">
+                <a href="https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Stumpel Heemskerk</div>
+            <div class="store-location">1961 NW Heemskerk</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Blokker</div>
+            <div class="store-location">2101 JP Heemstede</div>
+            <div class="store-link">
+                <a href="https://libris.nl/blokker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/blokker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Binnert Overdiep</div>
+            <div class="store-location">8442 BS Heerenveen</div>
+            <div class="store-link">
+                <a href="https://www.binnertoverdiep.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.binnertoverdiep.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Stumpel Heerhugowaard</div>
+            <div class="store-location">1703 SH Heerhugowaard</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Dominicanen Heerlen</div>
+            <div class="store-location">6411 JK Heerlen</div>
+            <div class="store-link">
+                <a href="https://www.boekhandeldominicanen.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.boekhandeldominicanen.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Heesch</div>
+            <div class="store-location">5384 AN Heesch</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelheesch/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelheesch/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek en Kantoor De Ganzenveer</div>
+            <div class="store-location">5701 PZ Helmond</div>
+            <div class="store-link">
+                <a href="https://libris.nl/ganzenveer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/ganzenveer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoorboekhandel Peter Swaanen</div>
+            <div class="store-location">5081 CL Hilvarenbeek</div>
+            <div class="store-link">
+                <a href="https://libris.nl/peterswaanen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/peterswaanen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Voorhoeve</div>
+            <div class="store-location">1211 CR Hilversum</div>
+            <div class="store-link">
+                <a href="https://libris.nl/voorhoeve/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/voorhoeve/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Hoevelaken</div>
+            <div class="store-location">3871 AM Hoevelaken</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelhoevelaken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelhoevelaken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Stevens</div>
+            <div class="store-location">2132 CM Hoofddorp</div>
+            <div class="store-link">
+                <a href="https://libris.nl/stevens/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/stevens/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Pet Boekverkopers</div>
+            <div class="store-location">7901 JV Hoogeveen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/pet-boekverkopers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/pet-boekverkopers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Stumpel Hoorn (Grote Noord)</div>
+            <div class="store-location">1621 KG Hoorn</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Stumpel Hoorn (Huesmolen)</div>
+            <div class="store-location">1625 HZ Hoorn</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Flevo</div>
+            <div class="store-location">1271 RR Huizen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/flevo/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/flevo/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Remortel - Hulst</div>
+            <div class="store-location">4561 EJ Hulst</div>
+            <div class="store-link">
+                <a href="https://libris.nl/remortel-hulst/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/remortel-hulst/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Holtrop</div>
+            <div class="store-location">8501 AS Joure</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelholtrop/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelholtrop/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Lectori</div>
+            <div class="store-location">4421 AC Kapelle</div>
+            <div class="store-link">
+                <a href="https://libris.nl/lectori/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/lectori/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Afhaalpunt Katwijk (enkel vooraf betaalde bestellingen afhalen) Brownies & Downies</div>
+            <div class="store-location">2225 CS Katwijk aan Zee</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vandermeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vandermeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Deurenberg</div>
+            <div class="store-location">6461 AS Kerkrade</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandeldeurenberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandeldeurenberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekwinkel Omlo</div>
+            <div class="store-location">7891 GG Klazienaveen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekwinkelomlo/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekwinkelomlo/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel CW 76</div>
+            <div class="store-location">1241 CP Kortenhoef</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelcw76/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelcw76/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Crimpenhof</div>
+            <div class="store-location">2922 AJ Krimpen aan den IJssel</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelcrimpenhof/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelcrimpenhof/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Stumpel Krommenie</div>
+            <div class="store-location">1561 AP Krommenie</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Larense Boekhandel</div>
+            <div class="store-location">1251 AW Laren</div>
+            <div class="store-link">
+                <a href="https://libris.nl/larenseboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/larenseboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van der Velde Boeken Leeuwarden</div>
+            <div class="store-location">8911 CJ Leeuwarden</div>
+            <div class="store-link">
+                <a href="https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Kooyker</div>
+            <div class="store-location">2311 CK Leiden</div>
+            <div class="store-link">
+                <a href="https://libris.nl/kooyker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/kooyker/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Kopermolen</div>
+            <div class="store-location">2317 PA Leiden</div>
+            <div class="store-link">
+                <a href="https://libris.nl/kopermolen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/kopermolen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Boekhandel Lemmer</div>
+            <div class="store-location">8531 EA Lemmer</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-lemmer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-lemmer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Rosetta</div>
+            <div class="store-location">3831 NC Leusden</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelrosetta/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelrosetta/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoorboekhandel Meneer Kees</div>
+            <div class="store-location">7131 DH Lichtenvoorde</div>
+            <div class="store-link">
+                <a href="https://libris.nl/meneerkees/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/meneerkees/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Lovink</div>
+            <div class="store-location">7241 AA Lochem</div>
+            <div class="store-link">
+                <a href="https://libris.nl/lovink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/lovink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Sprankenis</div>
+            <div class="store-location">6026 CP Maarheeze</div>
+            <div class="store-link">
+                <a href="https://libris.nl/sprankenis/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/sprankenis/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek & Koek</div>
+            <div class="store-location">3951 CH Maarn</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekenkoek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekenkoek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Dominicanen</div>
+            <div class="store-location">6211 CZ Maastricht</div>
+            <div class="store-link">
+                <a href="https://www.boekhandeldominicanen.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.boekhandeldominicanen.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek- en Kantoorvakhandel Prins</div>
+            <div class="store-location">7475 AX Markelo</div>
+            <div class="store-link">
+                <a href="https://libris.nl/prins/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/prins/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Stumpel Medemblik</div>
+            <div class="store-location">1671 BG Medemblik</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Drvkkery</div>
+            <div class="store-location">4331 LK Middelburg</div>
+            <div class="store-link">
+                <a href="https://drukkerijmiddelburg.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://drukkerijmiddelburg.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek - en kantoorvakhandel Dekker - Van Esbroek</div>
+            <div class="store-location">3241 GA Middelharnis</div>
+            <div class="store-link">
+                <a href="https://libris.nl/dekker-vanesbroek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/dekker-vanesbroek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Nimo Boek</div>
+            <div class="store-location">1141 BG Monnickendam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/nimoboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/nimoboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Roodbeen</div>
+            <div class="store-location">3861 AB Nijkerk</div>
+            <div class="store-link">
+                <a href="https://libris.nl/roodbeen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/roodbeen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Dekker v.d. Vegt Boekverkopers</div>
+            <div class="store-location">6511 PX Nijmegen</div>
+            <div class="store-link">
+                <a href="https://www.libris.nl/dekker-vd-vegt/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.libris.nl/dekker-vd-vegt/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoorboekhandel Jacobs</div>
+            <div class="store-location">6531 HE Nijmegen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/jacobs/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/jacobs/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Spithoff</div>
+            <div class="store-location">7442 NJ Nijverdal</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelspithoff/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelspithoff/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Van der Meer</div>
+            <div class="store-location">2201 MB Noordwijk</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vandermeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vandermeer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Westerhof Nunspeet</div>
+            <div class="store-location">8071 BZ Nunspeet</div>
+            <div class="store-link">
+                <a href="https://libris.nl/westerhofboeken-jufferenwal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/westerhofboeken-jufferenwal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Rijnlandse Boekhandel</div>
+            <div class="store-location">2343 CB Oegstgeest</div>
+            <div class="store-link">
+                <a href="https://libris.nl/rijnlandseboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/rijnlandseboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Oisterwijk</div>
+            <div class="store-location">5061 EJ Oisterwijk</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandeloisterwijk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandeloisterwijk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Korten Olst</div>
+            <div class="store-location">8121 BK Olst</div>
+            <div class="store-link">
+                <a href="https://libris.nl/korten/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/korten/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Meijer & Siegers</div>
+            <div class="store-location">6862 AX Oosterbeek</div>
+            <div class="store-link">
+                <a href="https://libris.nl/meijerensiegers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/meijerensiegers/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Het Verboden Rijk</div>
+            <div class="store-location">4901 JK Oosterhout</div>
+            <div class="store-link">
+                <a href="https://libris.nl/hetverbodenrijk-oosterhout/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/hetverbodenrijk-oosterhout/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Derijks</div>
+            <div class="store-location">5341 CK Oss</div>
+            <div class="store-link">
+                <a href="https://libris.nl/derijks/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/derijks/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Sprey</div>
+            <div class="store-location">1191 BG Ouderkerk aan de Amstel</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelsprey/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelsprey/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Panningen</div>
+            <div class="store-location">5981 AP Panningen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-panningen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-panningen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoorboekhandel Van Atten (Pijnacker)</div>
+            <div class="store-location">2641 EN Pijnacker</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vanattenboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vanattenboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Stumpel Purmerend</div>
+            <div class="store-location">1441 BB Purmerend</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Het Leesteken</div>
+            <div class="store-location">1441 BD Purmerend</div>
+            <div class="store-link">
+                <a href="https://libris.nl/leesteken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/leesteken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Bij Arie Lees | schrijf | kadoshop</div>
+            <div class="store-location">3297 BM Puttershoek</div>
+            <div class="store-link">
+                <a href="https://libris.nl/bij-arie/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/bij-arie/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel De Ridderhof</div>
+            <div class="store-location">2981 ET Ridderkerk</div>
+            <div class="store-link">
+                <a href="https://libris.nl/deridderhof/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/deridderhof/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Daan Nijman</div>
+            <div class="store-location">9301 AE Roden</div>
+            <div class="store-link">
+                <a href="https://www.daannijman.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.daannijman.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Veenerick Boek en Kantoor</div>
+            <div class="store-location">2371 DA Roelofarendsveen</div>
+            <div class="store-link">
+                <a href="https://www.veenerick.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.veenerick.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Boekenwurm (Afhaalpunt Boekhandel Quist)</div>
+            <div class="store-location">4701 JP Roosendaal</div>
+            <div class="store-link">
+                <a href="https://libris.nl/quistboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/quistboeken/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoorboekhandel Kortendijk</div>
+            <div class="store-location">4706 LA Roosendaal</div>
+            <div class="store-link">
+                <a href="https://libris.nl/kortendijk-tolberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/kortendijk-tolberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoorboekhandel Tolberg</div>
+            <div class="store-location">4708 HK Roosendaal</div>
+            <div class="store-link">
+                <a href="https://libris.nl/kortendijk-tolberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/kortendijk-tolberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel De Omslag</div>
+            <div class="store-location">5241 TJ Rosmalen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/deomslag/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/deomslag/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Donner</div>
+            <div class="store-location">3012 AG Rotterdam</div>
+            <div class="store-link">
+                <a href="https://www.donner.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.donner.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Maximus</div>
+            <div class="store-location">3054 GG Rotterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/maximushillegersberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/maximushillegersberg/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Relay Rotterdam Centraal Hal</div>
+            <div class="store-location">3013 AJ Rotterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Relay Rotterdam Centraal Passage</div>
+            <div class="store-location">3013 AJ Rotterdam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/relay/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Bredero Boeken</div>
+            <div class="store-location">2071 EP Santpoort-Noord</div>
+            <div class="store-link">
+                <a href="https://libris.nl/bredero/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/bredero/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Plukker</div>
+            <div class="store-location">1741 GB Schagen</div>
+            <div class="store-link">
+                <a href="https://boekhandelplukker.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://boekhandelplukker.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Pagina Plukker - Makadocentrum (afhaalpunt Boekhandel Plukker)</div>
+            <div class="store-location">1741 JA Schagen</div>
+            <div class="store-link">
+                <a href="https://boekhandelplukker.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://boekhandelplukker.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Spijker Boek en Gemak</div>
+            <div class="store-location">5374 AC Schaijk</div>
+            <div class="store-link">
+                <a href="https://libris.nl/despijkerboekengemak/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/despijkerboekengemak/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Boekhandel Scherpenzeel</div>
+            <div class="store-location">3925 KC Scherpenzeel</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-scherpenzeel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-scherpenzeel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Post Scriptum</div>
+            <div class="store-location">3121 CA Schiedam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/postscriptum/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/postscriptum/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Simpelveld</div>
+            <div class="store-location">6369 AW Simpelveld</div>
+            <div class="store-link">
+                <a href="https://boekhandelsimpelveld.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://boekhandelsimpelveld.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">La Livy Boek & Cadeau</div>
+            <div class="store-location">5271 AW Sint-Michielgestel</div>
+            <div class="store-link">
+                <a href="https://libris.nl/lalivy/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/lalivy/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Sint-Oedenrode</div>
+            <div class="store-location">5492 AT Sint-Oedenrode</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelsintoedenrode/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelsintoedenrode/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">PeZZi PaZZi</div>
+            <div class="store-location">1381 BA WEESP</div>
+            <div class="store-link">
+                <a href="https://www.pezzipazzi.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.pezzipazzi.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Remortel - Sluis</div>
+            <div class="store-location">4524 EC Sluis</div>
+            <div class="store-link">
+                <a href="https://libris.nl/remortel-sluis/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/remortel-sluis/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van der Velde Boeken Sneek</div>
+            <div class="store-location">8601 CM Sneek</div>
+            <div class="store-link">
+                <a href="https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Van de Ven</div>
+            <div class="store-location">3768 EJ Soest</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vandeven/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vandeven/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Someren</div>
+            <div class="store-location">5711 EN Someren</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelsomeren/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelsomeren/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Traverse</div>
+            <div class="store-location">5691 AD Son en Breugel</div>
+            <div class="store-link">
+                <a href="https://libris.nl/detraverse/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/detraverse/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Firma P.A. Vermeulen</div>
+            <div class="store-location">4651 BL Steenbergen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vermeulenboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vermeulenboekhandel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Blz. Steenwijk's Boekhuys</div>
+            <div class="store-location">8331 HD Steenwijk</div>
+            <div class="store-link">
+                <a href="https://libris.nl/steenwijk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/steenwijk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Schouten</div>
+            <div class="store-location">3291 AJ Strijen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelschouten/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelschouten/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">De Gemaksshop Tegelen</div>
+            <div class="store-location">5931 NM Tegelen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/gemaksshoptegelen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/gemaksshoptegelen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Van de Sande</div>
+            <div class="store-location">4531 GC Terneuzen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vandesande/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vandesande/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Nauta Boek</div>
+            <div class="store-location">1791 CB Texel (Den Burg)</div>
+            <div class="store-link">
+                <a href="https://libris.nl/nautaboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/nautaboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Arentsen en Tomey</div>
+            <div class="store-location">4001 LS Tiel</div>
+            <div class="store-link">
+                <a href="https://libris.nl/arentsen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/arentsen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Gianotten Mutsaers</div>
+            <div class="store-location">5038 XA Tilburg</div>
+            <div class="store-link">
+                <a href="https://www.gianottenmutsaers.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.gianottenmutsaers.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek- en Kantoorboekhandel Oonk</div>
+            <div class="store-location">7391 EK Twello</div>
+            <div class="store-link">
+                <a href="https://libris.nl/oonk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/oonk/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera BLZ Westra Ugchelen</div>
+            <div class="store-location">7339 CK Ugchelen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-westra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-westra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek- en Kantoorboekhandel Schuyt</div>
+            <div class="store-location">1911 ED Uitgeest</div>
+            <div class="store-link">
+                <a href="https://libris.nl/schuyt/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/schuyt/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Ulft</div>
+            <div class="store-location">7071 WT Ulft</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-ulft/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-ulft/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">BROESE</div>
+            <div class="store-location">3511 AW Utrecht</div>
+            <div class="store-link">
+                <a href="https://www.broese.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.broese.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoor & Boekhandel KEES (Ella Fitzgeraldplein)</div>
+            <div class="store-location">3543 EP Utrecht</div>
+            <div class="store-link">
+                <a href="https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Rutgers</div>
+            <div class="store-location">7051 CJ Varsseveld</div>
+            <div class="store-link">
+                <a href="https://www.boekhandelrutgers.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.boekhandelrutgers.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Boekhandel Hiemstra</div>
+            <div class="store-location">9641 DB Veendam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-hiemstra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-hiemstra/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Van Kooten</div>
+            <div class="store-location">3905 EB Veenendaal</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vankooten/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vankooten/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek- en Kantoorboekhandel Schellen</div>
+            <div class="store-location">5461 KE Veghel</div>
+            <div class="store-link">
+                <a href="https://libris.nl/schellen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/schellen/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Jansen & de Feijter</div>
+            <div class="store-location">6881 ST Velp</div>
+            <div class="store-link">
+                <a href="https://www.eenpassievoorboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.eenpassievoorboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Koops</div>
+            <div class="store-location">5911 BZ Venlo</div>
+            <div class="store-link">
+                <a href="https://www.boekhandelkoops.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.boekhandelkoops.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Roojboek</div>
+            <div class="store-location">5801 BV Venray</div>
+            <div class="store-link">
+                <a href="https://libris.nl/roojboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/roojboek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoor & Boekhandel KEES (Middenburcht)</div>
+            <div class="store-location">3452 MS Vleuten</div>
+            <div class="store-link">
+                <a href="https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel 't Spui</div>
+            <div class="store-location">4381 ER Vlissingen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandel-spui/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandel-spui/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Jan Cas Sombroek</div>
+            <div class="store-location">1131 BS Volendam</div>
+            <div class="store-link">
+                <a href="https://libris.nl/jancas-sombroek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/jancas-sombroek/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Borker Boekwinkel</div>
+            <div class="store-location">9431 AC Westerbork</div>
+            <div class="store-link">
+                <a href="https://libris.nl/borkerboekwinkel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/borkerboekwinkel/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Reterink</div>
+            <div class="store-location">7641 BV Wierden</div>
+            <div class="store-link">
+                <a href="https://libris.nl/reterink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/reterink/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Primera Boekhandel Wieringerwerf</div>
+            <div class="store-location">1771 AC Wieringerwerf</div>
+            <div class="store-link">
+                <a href="https://libris.nl/primeraboekhandelwieringerwerf/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/primeraboekhandelwieringerwerf/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Kramer, Winterswijk</div>
+            <div class="store-location">7101 NR Winterswijk</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boekhandelkramer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boekhandelkramer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kantoor & Boekhandel KEES (Fontaineplein)</div>
+            <div class="store-location">3446 BX Woerden</div>
+            <div class="store-link">
+                <a href="https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/visscher/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhuis Stumpel (Workum)</div>
+            <div class="store-location">8711 AA Workum</div>
+            <div class="store-link">
+                <a href="https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.stumpel.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Kramer & van Doorn</div>
+            <div class="store-location">3701 GE Zeist</div>
+            <div class="store-link">
+                <a href="https://libris.nl/kramer-vandoorn/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/kramer-vandoorn/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek en Buro Rebers</div>
+            <div class="store-location">6901 AK Zevenaar</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel De Vries</div>
+            <div class="store-location">4301 CB Zierikzee</div>
+            <div class="store-link">
+                <a href="https://libris.nl/devries/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/devries/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel D. Sonneveld (Winkelcentrum Meerzicht)</div>
+            <div class="store-location">2716 CW Zoetermeer</div>
+            <div class="store-link">
+                <a href="https://libris.nl/sonneveld/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/sonneveld/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel D. Sonneveld (Winkelcentrum Oosterheem)</div>
+            <div class="store-location">2721 NJ Zoetermeer</div>
+            <div class="store-link">
+                <a href="https://libris.nl/sonneveld/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/sonneveld/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Schoelier</div>
+            <div class="store-location">9801 BX Zuidhorn</div>
+            <div class="store-link">
+                <a href="https://libris.nl/schoelier/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/schoelier/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boek en Buro Van den Brink</div>
+            <div class="store-location">7201 LC Zutphen</div>
+            <div class="store-link">
+                <a href="https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/boek-en-buro/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van Someren & Ten Bosch Zutphen</div>
+            <div class="store-location">7201 KE Zutphen</div>
+            <div class="store-link">
+                <a href="https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Vos & Van der Leer (Walburg)</div>
+            <div class="store-location">3332 EH Zwijndrecht</div>
+            <div class="store-link">
+                <a href="https://libris.nl/vos-vanderleer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/vos-vanderleer/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Westerhof (Diezerstraat)</div>
+            <div class="store-location">8011 RL Zwolle</div>
+            <div class="store-link">
+                <a href="https://libris.nl/westerhofboeken-jufferenwal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/westerhofboeken-jufferenwal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Boekhandel Westerhof (Wade)</div>
+            <div class="store-location">8043 LS Zwolle</div>
+            <div class="store-link">
+                <a href="https://libris.nl/westerhofboeken-jufferenwal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://libris.nl/westerhofboeken-jufferenwal/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+        <div class="store">
+            <div class="store-name">Van der Velde Boeken Zwolle</div>
+            <div class="store-location">8011 VA Zwolle</div>
+            <div class="store-link">
+                <a href="https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390" target="_blank">https://www.vanderveldeboeken.nl/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390</a>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" onchange="updateCount()"> URL werkt correct
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateCount() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+            document.getElementById('checked-count').textContent = checked;
+        }
+    </script>
+</body>
+</html>

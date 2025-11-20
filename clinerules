@@ -1,0 +1,178 @@
+# Bookstore Finder Project Context
+
+## Project Overview
+This project helps readers find local bookstores where they can buy "Zanger Ronald zingt de blues" by Walter van den Berg, instead of defaulting to bol.com. The tool consists of two components:
+
+1. **Python Crawler** (Phase 1): Finds bookstore product pages and extracts location data
+2. **JavaScript Search Tool** (Phase 2): Frontend widget for website visitors to find nearby bookstores
+
+## Author's Goals
+- Support independent bookstores by directing traffic to them instead of bol.com
+- Build goodwill with booksellers (important for physical shelf placement)
+- Provide a user-friendly tool that shows local purchase options
+- Keep the implementation simple and maintainable
+
+## Technical Requirements
+
+### Phase 1: Python Crawler
+
+**Input:**
+- CSV file with Dutch bookstore URLs (provided by user)
+- Book details: "Zanger Ronald zingt de blues" by Walter van den Berg (should be configurable)
+
+**Search Strategy:**
+1. Primary: Google site-search (`site:bookstore.nl "book title"`)
+2. Fallback: Direct crawling if Google doesn't allow it
+
+**Data Extraction:**
+- Bookstore name
+- Product page URL for the specific book
+- Postal code (Dutch format: 4 digits + 2 letters, e.g., "1234 AB")
+- City/town name
+- Extraction priority: footer first, then contact page if needed
+
+**Output:**
+- SQLite database for local storage
+- JSON file for frontend consumption (to be hosted on webserver/GitHub)
+
+**Execution:**
+- Runs locally on user's laptop
+- Manually triggered (no scheduling needed)
+- Should run approximately once per month
+- Doesn't need to be perfect - some missing data is acceptable
+
+### Phase 2: JavaScript Search Tool
+
+**Input:**
+- JSON file (from crawler, hosted externally)
+- User input: 4-digit postal code prefix
+
+**Functionality:**
+- Fuzzy matching: search nearby postal codes until at least 1 result found
+- Handle large cities with 10-20 bookstores gracefully
+- Display bookstore name, city, and direct link to book's product page
+
+**Output:**
+- Simple HTML/JavaScript widget embeddable in author's website
+
+## JSON Data Structure
+
+The crawler should produce JSON in this format:
+
+```json
+{
+  "metadata": {
+    "book_title": "Zanger Ronald zingt de blues",
+    "author": "Walter van den Berg",
+    "last_updated": "2024-11-16T14:30:00",
+    "total_bookstores": 45
+  },
+  "bookstores": [
+    {
+      "name": "Boekhandel De Leesclub",
+      "product_url": "https://example.com/boeken/zanger-ronald-zingt-de-blues",
+      "postal_code": "1234AB",
+      "city": "Amsterdam",
+      "crawled_at": "2024-11-16T14:25:00"
+    }
+  ]
+}
+```
+
+## Ethical Crawling Requirements
+
+**CRITICAL:** The crawler must respect web standards:
+- Check and obey robots.txt for every domain
+- Implement rate limiting: minimum 2-3 seconds between requests to same domain
+- Use descriptive User-Agent header with contact info
+- Handle errors gracefully (don't retry endlessly)
+- Log all activity for debugging
+
+## Development Approach
+
+**For Phase 1 (Crawler):**
+- Use Python 3.9+ with requests, BeautifulSoup4, lxml
+- Keep dependencies minimal
+- Prioritize simplicity over sophistication
+- Accept that some bookstores might not be found (that's okay)
+- Build modular components that are easy to debug
+
+**For Phase 2 (Frontend):**
+- Vanilla JavaScript (no framework needed for simplicity)
+- Should work without build step
+- Simple, clean UI
+- Mobile-friendly
+
+## Known Constraints
+
+1. Not all Dutch bookstores will be found - that's acceptable
+2. Some product page links might break over time - acceptable
+3. Postal code extraction might fail for some sites - acceptable
+4. The tool is meant to be "sympathetic" not comprehensive
+
+## Success Criteria
+
+**Crawler succeeds if:**
+- Finds product pages for 60%+ of input bookstores
+- Extracts postal codes for 80%+ of found pages
+- Runs without crashing on diverse website structures
+- Produces valid JSON for frontend
+
+**Frontend succeeds if:**
+- Provides results for most 4-digit postal code inputs
+- Shows at least 1 bookstore for major cities
+- Degrades gracefully when no results found
+- Loads quickly and works on mobile
+
+## File Structure
+
+```
+bookstore-finder/
+├── crawler/
+│   ├── main.py                 # Main crawler script
+│   ├── config.py               # Configuration (book details, etc.)
+│   ├── google_search.py        # Google site-search logic
+│   ├── extractor.py            # Postal code & contact extraction
+│   ├── database.py             # SQLite operations
+│   └── requirements.txt        # Python dependencies
+├── data/
+│   ├── bookstores.csv          # Input: list of bookstore URLs
+│   ├── bookstores.db           # SQLite database
+│   └── bookstores.json         # Output: for frontend
+└── frontend/
+    ├── index.html              # Search widget
+    └── bookstore-finder.js     # Search logic
+
+## Dutch Language Specifics
+
+**Common patterns to look for:**
+- Footer text: "Adres:", "Bezoekadres:", "Winkeladres:"
+- Contact page URLs: /contact, /contacteer-ons, /neem-contact-op, /over-ons
+- Postal code format: strictly 4 digits (1-9 first digit) + 2 letters (no F,I,O,Q,U,Y)
+- City indicators: words before postal code, often after street address
+
+## Error Handling Philosophy
+
+The tool should fail gracefully:
+- If Google search fails → try direct crawling
+- If product page not found → log and skip (don't crash)
+- If postal code not found → log and skip
+- If contact page 404 → skip that bookstore
+- Never crash the entire run due to one bad URL
+
+## Testing Strategy
+
+Test with diverse bookstores:
+- Large chains (Bruna, Athenaeum)
+- Independent bookstores
+- Modern websites (JavaScript-heavy)
+- Older websites (simple HTML)
+- Sites with/without the book in stock
+
+## Future Considerations (Not for initial build)
+
+- Automatic monthly runs via cron
+- Email notifications when new bookstores found
+- Stock availability checking
+- Pricing comparison
+- Admin dashboard for managing bookstore list
