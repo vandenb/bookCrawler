@@ -77,3 +77,6 @@ frontend/
 *.html
 !widget/*.html
 !data/verify_urls.html
+
+# Website-specific files
+carwlindex.php
