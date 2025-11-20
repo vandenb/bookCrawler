@@ -1,31 +1,37 @@
-# BookCrawler - Boekhandel Finder
+# Boekhandel Finder
 
-Een tool die lezers helpt om lokale boekhandels te vinden waar ze "Zanger Ronald zingt de blues" van Walter van den Berg kunnen kopen, in plaats van standaard naar bol.com te gaan.
+Een postcode-gebaseerde zoektool die lezers helpt lokale boekhandels te vinden waar ze "Zanger Ronald zingt de blues" kunnen kopen.
 
-**Status**: De widget is live! 223 geverifieerde boekhandels beschikbaar.
+**Status**: Live met 223 geverifieerde boekhandels in Nederland.
 
-## 🎯 Doel
+## 🎯 Over dit project
 
-- Bezoekers van je website naar onafhankelijke boekhandels leiden
-- Goodwill opbouwen bij boekhandelaren (belangrijk voor fysieke placement)
-- Een gebruiksvriendelijke tool bieden die lokale aankoopopties toont
+**Eerlijk verhaal**: Dit heet "BookCrawler" maar is geen traditionele web crawler geworden. In plaats daarvan is het een **semi-geautomatiseerde data collection tool** met veel handmatige verificatie.
 
-## 📦 Wat zit er in dit project?
+**Waarom geen echte crawler?**
+- Google Search geblokkeerd door Cloudflare (403 Forbidden)
+- Direct crawling te complex door verschillende website-structuren
+- Robots.txt delays (15s) maakten het onpraktisch traag
 
-Het project bestaat uit twee hoofdcomponenten:
+**Wat werkte wel:**
+- Nederlandse boekhandels gebruiken Libris/BLZ platform met **één URL-patroon**
+- Pattern matching + handmatige verificatie = 223 werkende links
+- Pragmatische aanpak: "fuck it, we doen het handmatig met slimme tooling"
 
-### Fase 1: Data Verzameling ✅
-- Parsing van libris-blz.txt (236 boekhandels)
-- Automatische URL generatie met bekende patronen
+## 📦 Wat dit project biedt
+
+### 1. Data Collection Tools ✅
+- Parser voor Libris bookstore lijst
+- URL generator met bekende patronen
 - HTML verificatie tool voor handmatige controle
-- Finale dataset: 223 geverifieerde boekhandels
+- Workflow die **echt werkt** (90% handwerk, 10% automation)
 
-### Fase 2: JavaScript Zoekwidget ✅
-Een frontend widget die:
-- Bezoekers hun postcode laat invoeren (4 cijfers)
-- De dichtstbijzijnde boekhandels toont (op absolute numerieke afstand)
-- Directe links geeft naar de productpagina
-- Zowel standalone als embeddable versie
+### 2. JavaScript Zoekwidget ✅
+Fully functional widget:
+- Postcode search (eerste 4 cijfers)
+- Absolute numerieke afstand berekening
+- Direct links naar product pagina's
+- Standalone + embeddable versies
 
 ## 🚀 Quick Start
 
@@ -50,20 +56,27 @@ Upload naar je server:
 - `/data/bookstores.json`
 - `/widget/bookstore-finder-embed.js`
 
-### Optie 2: Data regenereren (als je de data wilt updaten)
+### Optie 2: Eigen dataset maken (voor een ander boek)
+
+**Realistisch tijdsinvestering**: 2-4 uur werk, afhankelijk van aantal winkels.
 
 ```bash
-# 1. Parse libris-blz.txt
+# 1. Parse libris-blz.txt (of andere source)
 python3 parse_libris.py
 
-# 2. Genereer URL patterns en HTML verificatie
+# 2. Genereer URL patterns
+# PAS AAN: url_pattern in generate_manual_entries.py met jouw boek
 python3 generate_manual_entries.py
 
-# 3. Open verify_urls.html en controleer alle links handmatig
+# 3. HANDMATIG: Open data/verify_urls.html
+#    Klik alle 200+ links, corrigeer fouten in manual_entries.csv
+#    Dit is het echte werk - plan hier 1-2 uur voor in
 
-# 4. Genereer JSON
+# 4. Genereer JSON voor widget
 python3 generate_json.py
 ```
+
+**Pro tip**: Als je boek NIET op Libris/BLZ staat, moet je een eigen lijst maken. Automatisch crawlen werkt waarschijnlijk niet (zie boven waarom).
 
 ## 📊 Data Flow
 
@@ -102,137 +115,75 @@ libris-blz.txt              Scripts                   Output
                                                      └─────────────┘
 ```
 
-## 🔧 Configuratie
-
-Alle instellingen zitten in `crawler/config.py`:
-
-```python
-BOOK_CONFIG = {
-    "title": "Zanger Ronald zingt de blues",
-    "author": "Walter van den Berg",
-    "isbn": "9789025459284"
-}
-
-CRAWLER_CONFIG = {
-    "delay_between_requests": 2.5,
-    "user_agent": "BookstoreFinder/1.0 (+je-website.nl)",
-    # ... meer settings
-}
-```
-
-Zie `example-config.py` voor alle opties.
-
 ## 📁 Project Structuur
 
 ```
 BookCrawler/
 ├── README.md                        # Dit bestand
-├── .gitignore                       # Git ignore regels
-│
-├── crawler/                         # Crawler code (niet gebruikt, maar bewaard)
-│   ├── config.py                    # Configuratie
-│   ├── google_search.py             # Google search functionaliteit
-│   └── utils.py                     # Utility functies
+├── .gitignore
 │
 ├── data/                            # Data folder
-│   ├── libris-blz.txt               # Input: originele lijst
-│   ├── bookstores.csv               # Parsed data (236 stores)
-│   ├── manual_entries.csv           # Handmatig geverifieerd (223 stores)
-│   ├── bookstores.json              # Finale JSON voor widget ⭐
-│   └── verify_urls.html             # HTML verificatie tool
+│   ├── libris-blz.txt               # Input: originele lijst van Libris
+│   ├── bookstores.csv               # Parsed (236 stores)
+│   ├── manual_entries.csv           # ✓ Handmatig geverifieerd (223)
+│   ├── bookstores.json              # ⭐ Finale data voor widget
+│   └── verify_urls.html             # Verificatie tool (zelf genereren)
 │
-├── widget/                          # JavaScript widget
+├── widget/                          # ⭐ JavaScript widget (production ready)
 │   ├── bookstore-finder.html        # Standalone pagina
-│   ├── bookstore-finder-embed.js    # Embeddable versie ⭐
-│   └── embed-example.html           # Voorbeeld
+│   ├── bookstore-finder-embed.js    # Embeddable versie
+│   └── embed-example.html           # Gebruik voorbeeld
 │
-├── parse_libris.py                  # Script 1: Parse libris-blz.txt
-├── generate_manual_entries.py       # Script 2: Genereer URLs + HTML
+├── parse_libris.py                  # Script 1: Parse input
+├── generate_manual_entries.py       # Script 2: URLs + HTML tool
 ├── generate_json.py                 # Script 3: CSV → JSON
-└── carwlindex.php                   # Je website met geïntegreerde widget
+│
+└── crawler/                         # Legacy crawler code
+    └── ...                          # (niet nodig voor deze workflow)
 ```
 
-⭐ = Belangrijkste bestanden voor productie gebruik
+**Wat je écht nodig hebt voor een nieuw boek:**
+1. Een lijst met boekhandel URLs (zoals libris-blz.txt)
+2. Het URL-patroon van je boek (bijv. `/a/auteur/titel/id`)
+3. 2-4 uur tijd voor handmatige verificatie
+4. De drie Python scripts (parse, generate, convert)
 
-## 🎯 Success Criteria
+## ⚙️ Aanpassen voor jouw boek
 
-### Crawler slaagt als:
-- ✅ Vindt productpagina's voor 60%+ van input bookstores
-- ✅ Extraheert postcodes voor 80%+ van gevonden pagina's
-- ✅ Draait zonder crashes bij diverse website-structuren
-- ✅ Produceert valide JSON voor frontend
-
-### Frontend slaagt als:
-- ✅ Geeft resultaten voor meeste 4-cijferige postcode inputs
-- ✅ Toont minimaal 1 boekhandel voor grote steden
-- ✅ Degradeert gracefully bij geen resultaten
-- ✅ Werkt snel en op mobile devices
-
-## 🛡️ Ethisch Crawlen
-
-De crawler respecteert het web door:
-- ✅ robots.txt te checken en respecteren
-- ✅ Rate limiting (2-3 sec tussen requests)
-- ✅ Duidelijke User-Agent met contactinfo
-- ✅ Graceful error handling (geen eindloze retries)
-- ✅ Logging van alle activiteit
-
-## 🐛 Troubleshooting
-
-### Google blokkeert automated searches
-**Oplossing:** Gebruik de fallback crawl-methode, of voeg langere delays toe (5-10 sec)
-
-### Postcode niet gevonden
-**Oorzaken:** 
-- Boekhandel heeft meerdere vestigingen (geen centrale postcode)
-- Online-only retailer zonder fysieke locatie
-**Oplossing:** Handmatig controleren en CSV aanvullen
-
-### Product page niet gevonden
-**Oorzaken:**
-- Boek tijdelijk uitverkocht
-- JavaScript-rendered content (crawler ziet het niet)
-**Oplossing:** Run met `--verbose` om te debuggen, overweeg browser automation
-
-Zie QUICK-START.md sectie "Veelvoorkomende Issues" voor meer.
-
-## 📖 Gebruik
-
-### Basis gebruik
-```bash
-python main.py --input ../data/bookstores.csv
+**In `generate_manual_entries.py` (regel 19):**
+```python
+# Pas dit aan naar jouw boek URL
+url_pattern = "/a/walter-van-den-berg/zanger-ronald-zingt-de-blues/501634390"
 ```
 
-### Met opties
-```bash
-python main.py \
-  --input ../data/bookstores.csv \
-  --output ../data/bookstores.json \
-  --db ../data/bookstores.db \
-  --verbose \
-  --limit 10
-```
+Hoe vind je dit patroon?
+1. Zoek je boek op een Libris boekhandel (bijv. athenaeum.nl)
+2. Kopieer het URL gedeelte NA de domeinnaam
+3. Test op 2-3 andere Libris winkels of het werkt
 
-### Help
-```bash
-python main.py --help
-```
+## 💡 Wat ik geleerd heb
 
-## 📈 Uitbreidingsmogelijkheden
+**Voor toekomstige gebruikers van dit project:**
 
-Toekomstige features (niet in initiële build):
-- Automatische maandelijkse runs via cron
-- Email notificaties bij nieuwe boekhandels
-- Voorraad-beschikbaarheid checking
-- Prijsvergelijking
-- Admin dashboard voor bookstore management
+1. **Web crawling is moeilijk in 2024**
+   - Bot detection is overal (Cloudflare, reCAPTCHA)
+   - Robots.txt delays maken het traag
+   - JavaScript-rendered content is lastig zonder browser automation
 
-## 🤝 Voor Boekhandelaren
+2. **Pattern matching werkt beter dan je denkt**
+   - Als je domein één platform gebruikt (zoals Libris), zoek het patroon
+   - Test het patroon op 5-10 sites
+   - Genereer URLs en verifieer handmatig
 
-Als je een boekhandelaar bent en wilt dat je winkel in deze tool verschijnt:
-1. Zorg dat "Zanger Ronald zingt de blues" in je online assortiment staat
-2. Zet duidelijke contactgegevens (met postcode) in je website footer
-3. Contact de auteur via [je-email@adres.nl]
+3. **Handmatig werk is OK**
+   - 2 uur handmatige verificatie vs 20 uur crawler debuggen
+   - Je krijgt 100% accurate data
+   - Je leert de uitzonderingen kennen
+
+4. **Tooling > Automation**
+   - Een HTML verificatie pagina met checkboxes = goud waard
+   - CSV editing is snel en overzichtelijk
+   - Python scripts voor repetitieve taken
 
 ## 🔍 Hoe de widget werkt
 
