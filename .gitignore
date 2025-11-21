@@ -70,6 +70,8 @@ lijst.csv
 *.png
 *.jpg
 *.jpeg
+libris*.html
+libris*.png
 
 # Temporary/dump files
 dump/
